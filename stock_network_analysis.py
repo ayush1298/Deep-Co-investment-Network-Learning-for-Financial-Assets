@@ -76,7 +76,7 @@ from torch import nn
 from torch.autograd import Variable
 from torch.backends import cudnn
 import networkx as nx
-from crnn_factory import CRNN_factory
+from Models.crnn_factory import CRNN_factory
 from data_util import Data_util
 import scipy.stats as stats
 try:
@@ -127,7 +127,9 @@ XLG = ['AAPL','MSFT','AMZN','FB','BRK','B','JNJ','JPM','XOM','GOOG','GOOGL','BAC
 # https://www.ishares.com/us/products/239721/ishares-russell-top-200-etf
 IWL = ['AAPL','MSFT','AMZN','FB','BRKB','JNJ','JPM','XOM','GOOG','GOOGL','BAC','WFC','CVX','HD','PG','UNH','T','V','PFE','VZ','INTC','C','CSCO','BA','CMCSA','KO','DWDP','DIS','PEP','MRK','ABBV','PM','MA','GE','WMT','ORCL','MMM','IBM','MCD','AMGN','MO','NVDA','HON','TXN','MDT','UNP','AVGO','SLB','GILD','BMY','QCOM','UTX','ABT','ACN','ADBE','CAT','PCLN','PYPL','UPS','GS','NFLX','USB','SBUX','LOW','TMO','LLY','COST','LMT','NKE','CVS','CELG','PNC','CRM','BIIB','AXP','COP','BLK','MS','TWX','NEE','CB','FDX','WBA','SCHW','CHTR','CL','EOG','MDLZ','ANTM','AMAT','DHR','BDX','AGN','AET','OXY','AMT','BK','RTN','GM','AIG','DUK','ADP','SYK','GD','DE','PRU','CI','MON','ITW','SPG','ATVI','CME','NOC','COF','TJX','CSX','MU','D','ISRG','KHC','MET','F','EMR','PX','PSX','TSLA','ESRX','HAL','SPGI','SO','NSC','CTSH','ICE','MAR','VLO','CCI','TGT','BBT','MMC','KMB','NXPI','INTU','HPQ','DAL','STT','HUM','VRTX','FOXA','WM','ALL','LYB','TRV','KMI','EXC','ETN','EBAY','BSX','JCI','MCK','LUV','APD','STZ','ECL','SHW','EQIX','AFL','AON','BAX','GIS','EA','AEP','APC','PXD','SYY','GLW','REGN','PPG','PSA','EL','CCL','YUM','MNST','HPE','ALXN','BLKFDS','LVS','HCA','KR','ADM','PCG','EQR','CBS','TMUS','USD','FOX','BEN','DISH','VMW','BHF','S','JPFFT','ESH8']
 
-    
+DEVICE = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
+print(f"Using device: {DEVICE}")
+
 class Experimental_platform:
     def __init__(self,datatool):
         self.model=None
@@ -493,7 +495,7 @@ if __name__ == "__main__":
     print('[Parameters]***********************************************')
     datatool=Data_util(TICKER_NUM,WINDOW,FEATURE_NUM,DATA_PATH,SPY_PATH)
     experiment=Experimental_platform(datatool)
-    start = time.clock()
+    start = time.time()
     experiment.coverage_comparison()
     #for seed in [5,6]:
     #experiment.DNL_density_comparison(0)
@@ -504,7 +506,7 @@ if __name__ == "__main__":
     #experiment.sum_degree()
 
 
-    elapsed = (time.clock() - start)
+    elapsed = (time.time() - start)
     print("Time used:", elapsed, 'Seconds')
     
     

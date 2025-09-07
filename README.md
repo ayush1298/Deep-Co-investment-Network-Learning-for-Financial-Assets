@@ -55,7 +55,7 @@ The system uses a **CRNN (Convolutional Recurrent Neural Network)** architecture
 │   ├── learner.py                  # Graph learning implementations
 │   └── financial_index.py          # Financial metrics calculation
 │
-├── 🧠 Deep Learning Models  
+├── 🧠 Models  
 │   ├── crnn.py                     # Base CRNN class
 │   ├── crnn_factory.py            # Model factory for CRNN variants
 │   ├── crnn_lstm.py               # LSTM implementation
