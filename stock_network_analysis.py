@@ -94,6 +94,10 @@ except ImportError:
 import time
 import itertools
 
+
+DEVICE = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
+print(f"Using device: {DEVICE}")
+
 # Hyper Parameters
 LEARNER_CODE = 'DEEPCNL'  #DEEPCNL, PCC, DTW, VWL
 CRNN_CODE = 'CRNN_LSTM' # CRNN_RNN,CRNN_LSTM,CRNN_GRU
@@ -127,134 +131,105 @@ XLG = ['AAPL','MSFT','AMZN','FB','BRK','B','JNJ','JPM','XOM','GOOG','GOOGL','BAC
 # https://www.ishares.com/us/products/239721/ishares-russell-top-200-etf
 IWL = ['AAPL','MSFT','AMZN','FB','BRKB','JNJ','JPM','XOM','GOOG','GOOGL','BAC','WFC','CVX','HD','PG','UNH','T','V','PFE','VZ','INTC','C','CSCO','BA','CMCSA','KO','DWDP','DIS','PEP','MRK','ABBV','PM','MA','GE','WMT','ORCL','MMM','IBM','MCD','AMGN','MO','NVDA','HON','TXN','MDT','UNP','AVGO','SLB','GILD','BMY','QCOM','UTX','ABT','ACN','ADBE','CAT','PCLN','PYPL','UPS','GS','NFLX','USB','SBUX','LOW','TMO','LLY','COST','LMT','NKE','CVS','CELG','PNC','CRM','BIIB','AXP','COP','BLK','MS','TWX','NEE','CB','FDX','WBA','SCHW','CHTR','CL','EOG','MDLZ','ANTM','AMAT','DHR','BDX','AGN','AET','OXY','AMT','BK','RTN','GM','AIG','DUK','ADP','SYK','GD','DE','PRU','CI','MON','ITW','SPG','ATVI','CME','NOC','COF','TJX','CSX','MU','D','ISRG','KHC','MET','F','EMR','PX','PSX','TSLA','ESRX','HAL','SPGI','SO','NSC','CTSH','ICE','MAR','VLO','CCI','TGT','BBT','MMC','KMB','NXPI','INTU','HPQ','DAL','STT','HUM','VRTX','FOXA','WM','ALL','LYB','TRV','KMI','EXC','ETN','EBAY','BSX','JCI','MCK','LUV','APD','STZ','ECL','SHW','EQIX','AFL','AON','BAX','GIS','EA','AEP','APC','PXD','SYY','GLW','REGN','PPG','PSA','EL','CCL','YUM','MNST','HPE','ALXN','BLKFDS','LVS','HCA','KR','ADM','PCG','EQR','CBS','TMUS','USD','FOX','BEN','DISH','VMW','BHF','S','JPFFT','ESH8']
 
-DEVICE = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
-print(f"Using device: {DEVICE}")
 
 class Experimental_platform:
-    def __init__(self,datatool):
-        self.model=None
-        self.datatool=datatool
-        self.wlkernel=WLkernerl()
-        self.crnn_factory=CRNN_factory(FEATURE_NUM, FILTERS_NUM, WINDOW, TICKER_NUM, HIDDEN_UNIT_NUM, HIDDEN_LAYER_NUM, DROPOUT)
+    def __init__(self, datatool):
+        self.model = None
+        self.datatool = datatool
+        self.wlkernel = WLkernerl()
+        self.crnn_factory = CRNN_factory(FEATURE_NUM, FILTERS_NUM, WINDOW, TICKER_NUM, HIDDEN_UNIT_NUM, HIDDEN_LAYER_NUM, DROPOUT)
+        self.device = DEVICE  # Add device attribute
 
-    def regularizer(self,lam,loss):
-        li_reg_loss = 0
-        for m in self.model.modules():
-            if isinstance(m, nn.Linear):
-                temp_loss = torch.sqrt(torch.sum(torch.pow(m.weight,2)))
-                li_reg_loss += temp_loss
-        loss = loss + lam*li_reg_loss
-        return loss
-
-    
-    def train_model(self,x,y):
-        self.model=None
+    def train_model(self, x, y):
+        self.model = None
         self.model = self.crnn_factory.get_model(CRNN_CODE)
-        self.model.cuda()
-        self.optimizer = torch.optim.Adam(self.model.parameters(), lr=LR)   # optimize
-        #self.optimizer = torch.optim.Adadelta(self.model.parameters())
-        #self.optimizer = torch.optim.Adagrad(self.model.parameters(), lr=LR)
-        #self.optimizer = torch.optim.RMSprop(self.model.parameters(), lr=LR,alpha=0.9)
-        #self.optimizer = torch.optim.SGD(self.model.parameters(), lr=0.15, momentum=0.8)
-        self.loss_func = torch.nn.CrossEntropyLoss()#size_average=True
-        #self.loss_func = nn.MSELoss()
-        #loss_func = Reward_loss()
+        self.model.to(self.device)  # Use .to() instead of .cuda()
+        self.optimizer = torch.optim.Adam(self.model.parameters(), lr=LR)
+        self.loss_func = torch.nn.CrossEntropyLoss()
 
-        # train the deep learning model
         print('start training the deep learning model')
-        cudnn.benchmark = True
-        inputs = Variable(torch.from_numpy(x)).float().cuda()   # shape (batch, time_step, input_size)
-        targets = Variable(torch.from_numpy(y)).long().cuda()
+        if self.device.type == 'cuda':
+            cudnn.benchmark = True
+            
+        inputs = Variable(torch.from_numpy(x)).float().to(self.device)  # Use .to() instead of .cuda()
+        targets = Variable(torch.from_numpy(y)).long().to(self.device)   # Use .to() instead of .cuda()
         self.model.train()
-        prediction=None
+        prediction = None
+        
         for epoch in range(EPOCH_NUM):
             self.model.zero_grad()
             self.model.hidden = self.model.init_hidden()
 
-            prediction = self.model(inputs)   # model output
-            #convert the prediction into a classification series
-            loss = self.loss_func.forward(self.model.classify_result(prediction), targets)         # CrossEntropy loss
-            #loss = self.loss_func.forward(prediction, targets.float()) # MSE loss
-            loss = self.regularizer(LAM,loss)
-            self.optimizer.zero_grad()                   # clear gradients for this training step
-            loss.backward()                         # backpropagation, compute gradients
-            self.optimizer.step()                        # apply gradients
-            if epoch%10==0:
-                print('epoch',epoch,loss.data.cpu().numpy()[0])
-        result=self.model.classify_result(prediction)
-        #pred = result.max(1, keepdim=True)[1]
+            prediction = self.model(inputs)
+            loss = self.loss_func.forward(self.model.classify_result(prediction), targets)
+            loss = self.regularizer(LAM, loss)
+            self.optimizer.zero_grad()
+            loss.backward()
+            self.optimizer.step()
+            
+            if epoch % 10 == 0:
+                print('epoch', epoch, loss.data.cpu().numpy())  # Fixed: removed [0] indexing
+                
+        result = self.model.classify_result(prediction)
         torch.save(self.model, 'model.pt')
-        return loss.data.cpu().numpy()[0] # return train loss
-    
-    def test_model(self,x,y):
-        #torch.backends.cudnn.benchmark = True
-        self.model=torch.load('model.pt', map_location=lambda storage, loc: storage) # load data into cpu and test
-        self.model.eval()  # TODO: weird bug for no-contigous input at the batch normal
-        self.loss_func=self.loss_func.cpu()
-        print('testing the learned model')
-        correct=0
-        inputs = Variable(torch.from_numpy(x)).cpu()
-        targets = Variable(torch.from_numpy(y)).cpu()
-        #inputs=inputs.contiguous()
+        return loss.data.cpu().numpy()  # Fixed: removed [0] indexing
 
-        prediction = self.model(inputs.float())   # test output
-        result=self.model.classify_result(prediction)
-        #convert the prediction into a classification series
+    def test_model(self, x, y):
+        self.model = torch.load('model.pt', map_location=self.device)  # Use device mapping
+        self.model.eval()
+        self.loss_func = self.loss_func.to(self.device)
+        print('testing the learned model')
+        
+        inputs = Variable(torch.from_numpy(x)).to(self.device)
+        targets = Variable(torch.from_numpy(y)).to(self.device)
+
+        prediction = self.model(inputs.float())
+        result = self.model.classify_result(prediction)
         loss = self.loss_func.forward(result, targets.long())
-        print('test loss',loss.cpu().data.numpy())
+        print('test loss', loss.cpu().data.numpy())
+        
         pred = result.max(1, keepdim=True)[1]
         correct = pred.eq(targets.view_as(pred).long()).sum()
-        acc=(correct.float()/len(targets)).cpu().data.numpy()
-        print('accuracy:',acc)
-        return loss.cpu().data.numpy()[0],acc # return test loss and accuracy
+        acc = (correct.float() / len(targets)).cpu().data.numpy()
+        print('accuracy:', acc)
+        return loss.cpu().data.numpy(), acc
 
-    def top_degree_nodes(self,g):
-        result=sorted(g.degree,key= lambda x: x[1],reverse=True)
-        node_num=len(g.nodes())
-        N=TOP_DEGREE_NODE_NUM
-        if node_num<TOP_DEGREE_NODE_NUM:
-            N=node_num
-        for n in range(0,N):
-            print(result[n])
-
-    def DNL_graph_learning(self,dnl_implementation,rare_ratio):
+    def DNL_graph_learning(self, dnl_implementation, rare_ratio):
         W = None
         for m in self.model.modules():
             if isinstance(m, nn.LSTM):
-                (W_ii, W_if, W_ig, W_io) = m.weight_ih_l0.view(4, HIDDEN_UNIT_NUM,
-                                                               -1)  # LSTM weights, from input to the hidden layers
+                (W_ii, W_if, W_ig, W_io) = m.weight_ih_l0.view(4, HIDDEN_UNIT_NUM, -1)
                 if dnl_implementation == 'igo':
-                    W = W_ii + W_ig + W_io  # paper version
+                    W = W_ii + W_ig + W_io
                 if dnl_implementation == 'igof':
-                    W = W_ii + W_io + W_ig + W_if  # full version
+                    W = W_ii + W_io + W_ig + W_if
                 if dnl_implementation == 'io':
-                    W = W_ii + W_io  # input and output gates
+                    W = W_ii + W_io
                 if dnl_implementation == 'g':
-                    W = W_ig  # input and output gates
+                    W = W_ig
 
             if isinstance(m, nn.RNN):
                 W = m.weight_ih_l0
             if isinstance(m, nn.GRU):
                 (W_ir, W_iz, W_in) = m.weight_ih_l0.view(3, HIDDEN_UNIT_NUM, -1)
                 W = W_iz + W_in + W_ir
-        W = W.cumsum(dim=0)[HIDDEN_UNIT_NUM - 1]  # .cumsum(dim=0)
+                
+        W = W.cumsum(dim=0)[HIDDEN_UNIT_NUM - 1]
         W = W.sort(descending=True)
         E = W[1]  # ticker dyadics
         W = W[0]  # ticker weights
         g = nx.Graph()
         edge_bunch = []
-        for k in range(0, int(TICKER_NUM * (TICKER_NUM - 1) * 0.5 * rare_ratio)):  # loaded edge numbers
-            if W[k].cpu().data.numpy()[0] > 0:
-                (i, j) = self.datatool.check_dyadic(E[k].cpu().data.numpy()[0])
+        
+        for k in range(0, int(TICKER_NUM * (TICKER_NUM - 1) * 0.5 * rare_ratio)):
+            if W[k].cpu().data.numpy() > 0:  # Fixed: removed [0] indexing
+                (i, j) = self.datatool.check_dyadic(E[k].cpu().data.numpy())  # Fixed: removed [0] indexing
                 i = self.datatool.check_ticker(i)
                 j = self.datatool.check_ticker(j)
-                # g.add_edge(i,j)
-                edge_bunch.append((i, j, W[k].cpu().data.numpy()[0]))
+                edge_bunch.append((i, j, W[k].cpu().data.numpy()))  # Fixed: removed [0] indexing
+                
         g.add_weighted_edges_from(edge_bunch)
         self.top_degree_nodes(g)
-
-        # nx.draw(g, nx.spring_layout(g), with_labels=True,font_size=20)
-        # plt.show()
         return g
 
 

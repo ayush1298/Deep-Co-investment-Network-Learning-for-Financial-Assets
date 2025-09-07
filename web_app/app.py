@@ -8,7 +8,7 @@ app = Flask(__name__)
 # Load precomputed data
 def load_data():
     """Load all precomputed data files"""
-    data_dir = 'web_app/data'
+    data_dir = 'data'
     
     with open(os.path.join(data_dir, 'network_data.json'), 'r') as f:
         network_data = json.load(f)

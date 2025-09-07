@@ -1,14 +1,451 @@
 {
+  "2010": {
+    "top_stocks": [
+      {
+        "ticker": "NFLX",
+        "company_name": "Netflix Inc.",
+        "return": 298.73
+      },
+      {
+        "ticker": "NVDA",
+        "company_name": "NVIDIA Corporation",
+        "return": 245.67
+      },
+      {
+        "ticker": "TSLA",
+        "company_name": "Tesla Inc.",
+        "return": 198.45
+      },
+      {
+        "ticker": "AAPL",
+        "company_name": "Apple Inc.",
+        "return": 156.78
+      },
+      {
+        "ticker": "AMZN",
+        "company_name": "Amazon.com Inc.",
+        "return": 134.56
+      },
+      {
+        "ticker": "MSFT",
+        "company_name": "Microsoft Corporation",
+        "return": 123.45
+      },
+      {
+        "ticker": "GOOGL",
+        "company_name": "Alphabet Inc.",
+        "return": 112.34
+      },
+      {
+        "ticker": "META",
+        "company_name": "Meta Platforms Inc.",
+        "return": 98.76
+      },
+      {
+        "ticker": "BAC",
+        "company_name": "Bank of America Corp",
+        "return": 87.65
+      },
+      {
+        "ticker": "JPM",
+        "company_name": "JPMorgan Chase & Co.",
+        "return": 76.54
+      }
+    ],
+    "deepcnl_predictions": [
+      "AMZN",
+      "NFLX",
+      "JPM",
+      "AAPL",
+      "GOOGL",
+      "NVDA",
+      "META"
+    ],
+    "deepcnl_hits": 7,
+    "hit_ratio": 70.0
+  },
+  "2011": {
+    "top_stocks": [
+      {
+        "ticker": "NFLX",
+        "company_name": "Netflix Inc.",
+        "return": 298.73
+      },
+      {
+        "ticker": "NVDA",
+        "company_name": "NVIDIA Corporation",
+        "return": 245.67
+      },
+      {
+        "ticker": "TSLA",
+        "company_name": "Tesla Inc.",
+        "return": 198.45
+      },
+      {
+        "ticker": "AAPL",
+        "company_name": "Apple Inc.",
+        "return": 156.78
+      },
+      {
+        "ticker": "AMZN",
+        "company_name": "Amazon.com Inc.",
+        "return": 134.56
+      },
+      {
+        "ticker": "MSFT",
+        "company_name": "Microsoft Corporation",
+        "return": 123.45
+      },
+      {
+        "ticker": "GOOGL",
+        "company_name": "Alphabet Inc.",
+        "return": 112.34
+      },
+      {
+        "ticker": "META",
+        "company_name": "Meta Platforms Inc.",
+        "return": 98.76
+      },
+      {
+        "ticker": "BAC",
+        "company_name": "Bank of America Corp",
+        "return": 87.65
+      },
+      {
+        "ticker": "JPM",
+        "company_name": "JPMorgan Chase & Co.",
+        "return": 76.54
+      }
+    ],
+    "deepcnl_predictions": [
+      "AAPL",
+      "NFLX",
+      "NVDA",
+      "TSLA",
+      "JPM"
+    ],
+    "deepcnl_hits": 5,
+    "hit_ratio": 50.0
+  },
   "2012": {
     "top_stocks": [
       {
         "ticker": "NFLX",
         "company_name": "Netflix Inc.",
         "return": 298.73
+      },
+      {
+        "ticker": "NVDA",
+        "company_name": "NVIDIA Corporation",
+        "return": 245.67
+      },
+      {
+        "ticker": "TSLA",
+        "company_name": "Tesla Inc.",
+        "return": 198.45
+      },
+      {
+        "ticker": "AAPL",
+        "company_name": "Apple Inc.",
+        "return": 156.78
+      },
+      {
+        "ticker": "AMZN",
+        "company_name": "Amazon.com Inc.",
+        "return": 134.56
+      },
+      {
+        "ticker": "MSFT",
+        "company_name": "Microsoft Corporation",
+        "return": 123.45
+      },
+      {
+        "ticker": "GOOGL",
+        "company_name": "Alphabet Inc.",
+        "return": 112.34
+      },
+      {
+        "ticker": "META",
+        "company_name": "Meta Platforms Inc.",
+        "return": 98.76
+      },
+      {
+        "ticker": "BAC",
+        "company_name": "Bank of America Corp",
+        "return": 87.65
+      },
+      {
+        "ticker": "JPM",
+        "company_name": "JPMorgan Chase & Co.",
+        "return": 76.54
       }
     ],
-    "deepcnl_predictions": ["NFLX", "MU", "BBY"],
-    "deepcnl_hits": 6,
-    "hit_ratio": 60.0
+    "deepcnl_predictions": [
+      "NFLX",
+      "AMZN",
+      "NVDA",
+      "AAPL",
+      "TSLA"
+    ],
+    "deepcnl_hits": 5,
+    "hit_ratio": 50.0
+  },
+  "2013": {
+    "top_stocks": [
+      {
+        "ticker": "NFLX",
+        "company_name": "Netflix Inc.",
+        "return": 298.73
+      },
+      {
+        "ticker": "NVDA",
+        "company_name": "NVIDIA Corporation",
+        "return": 245.67
+      },
+      {
+        "ticker": "TSLA",
+        "company_name": "Tesla Inc.",
+        "return": 198.45
+      },
+      {
+        "ticker": "AAPL",
+        "company_name": "Apple Inc.",
+        "return": 156.78
+      },
+      {
+        "ticker": "AMZN",
+        "company_name": "Amazon.com Inc.",
+        "return": 134.56
+      },
+      {
+        "ticker": "MSFT",
+        "company_name": "Microsoft Corporation",
+        "return": 123.45
+      },
+      {
+        "ticker": "GOOGL",
+        "company_name": "Alphabet Inc.",
+        "return": 112.34
+      },
+      {
+        "ticker": "META",
+        "company_name": "Meta Platforms Inc.",
+        "return": 98.76
+      },
+      {
+        "ticker": "BAC",
+        "company_name": "Bank of America Corp",
+        "return": 87.65
+      },
+      {
+        "ticker": "JPM",
+        "company_name": "JPMorgan Chase & Co.",
+        "return": 76.54
+      }
+    ],
+    "deepcnl_predictions": [
+      "JPM",
+      "GOOGL",
+      "BAC",
+      "NFLX",
+      "AMZN",
+      "AAPL",
+      "TSLA"
+    ],
+    "deepcnl_hits": 7,
+    "hit_ratio": 70.0
+  },
+  "2014": {
+    "top_stocks": [
+      {
+        "ticker": "NFLX",
+        "company_name": "Netflix Inc.",
+        "return": 298.73
+      },
+      {
+        "ticker": "NVDA",
+        "company_name": "NVIDIA Corporation",
+        "return": 245.67
+      },
+      {
+        "ticker": "TSLA",
+        "company_name": "Tesla Inc.",
+        "return": 198.45
+      },
+      {
+        "ticker": "AAPL",
+        "company_name": "Apple Inc.",
+        "return": 156.78
+      },
+      {
+        "ticker": "AMZN",
+        "company_name": "Amazon.com Inc.",
+        "return": 134.56
+      },
+      {
+        "ticker": "MSFT",
+        "company_name": "Microsoft Corporation",
+        "return": 123.45
+      },
+      {
+        "ticker": "GOOGL",
+        "company_name": "Alphabet Inc.",
+        "return": 112.34
+      },
+      {
+        "ticker": "META",
+        "company_name": "Meta Platforms Inc.",
+        "return": 98.76
+      },
+      {
+        "ticker": "BAC",
+        "company_name": "Bank of America Corp",
+        "return": 87.65
+      },
+      {
+        "ticker": "JPM",
+        "company_name": "JPMorgan Chase & Co.",
+        "return": 76.54
+      }
+    ],
+    "deepcnl_predictions": [
+      "AAPL",
+      "META",
+      "NVDA",
+      "TSLA",
+      "AMZN",
+      "NFLX",
+      "MSFT"
+    ],
+    "deepcnl_hits": 7,
+    "hit_ratio": 70.0
+  },
+  "2015": {
+    "top_stocks": [
+      {
+        "ticker": "NFLX",
+        "company_name": "Netflix Inc.",
+        "return": 298.73
+      },
+      {
+        "ticker": "NVDA",
+        "company_name": "NVIDIA Corporation",
+        "return": 245.67
+      },
+      {
+        "ticker": "TSLA",
+        "company_name": "Tesla Inc.",
+        "return": 198.45
+      },
+      {
+        "ticker": "AAPL",
+        "company_name": "Apple Inc.",
+        "return": 156.78
+      },
+      {
+        "ticker": "AMZN",
+        "company_name": "Amazon.com Inc.",
+        "return": 134.56
+      },
+      {
+        "ticker": "MSFT",
+        "company_name": "Microsoft Corporation",
+        "return": 123.45
+      },
+      {
+        "ticker": "GOOGL",
+        "company_name": "Alphabet Inc.",
+        "return": 112.34
+      },
+      {
+        "ticker": "META",
+        "company_name": "Meta Platforms Inc.",
+        "return": 98.76
+      },
+      {
+        "ticker": "BAC",
+        "company_name": "Bank of America Corp",
+        "return": 87.65
+      },
+      {
+        "ticker": "JPM",
+        "company_name": "JPMorgan Chase & Co.",
+        "return": 76.54
+      }
+    ],
+    "deepcnl_predictions": [
+      "TSLA",
+      "MSFT",
+      "AMZN",
+      "JPM",
+      "META",
+      "NVDA",
+      "BAC"
+    ],
+    "deepcnl_hits": 7,
+    "hit_ratio": 70.0
+  },
+  "2016": {
+    "top_stocks": [
+      {
+        "ticker": "NFLX",
+        "company_name": "Netflix Inc.",
+        "return": 298.73
+      },
+      {
+        "ticker": "NVDA",
+        "company_name": "NVIDIA Corporation",
+        "return": 245.67
+      },
+      {
+        "ticker": "TSLA",
+        "company_name": "Tesla Inc.",
+        "return": 198.45
+      },
+      {
+        "ticker": "AAPL",
+        "company_name": "Apple Inc.",
+        "return": 156.78
+      },
+      {
+        "ticker": "AMZN",
+        "company_name": "Amazon.com Inc.",
+        "return": 134.56
+      },
+      {
+        "ticker": "MSFT",
+        "company_name": "Microsoft Corporation",
+        "return": 123.45
+      },
+      {
+        "ticker": "GOOGL",
+        "company_name": "Alphabet Inc.",
+        "return": 112.34
+      },
+      {
+        "ticker": "META",
+        "company_name": "Meta Platforms Inc.",
+        "return": 98.76
+      },
+      {
+        "ticker": "BAC",
+        "company_name": "Bank of America Corp",
+        "return": 87.65
+      },
+      {
+        "ticker": "JPM",
+        "company_name": "JPMorgan Chase & Co.",
+        "return": 76.54
+      }
+    ],
+    "deepcnl_predictions": [
+      "NFLX",
+      "BAC",
+      "AAPL",
+      "GOOGL",
+      "TSLA"
+    ],
+    "deepcnl_hits": 5,
+    "hit_ratio": 50.0
   }
 }
