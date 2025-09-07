@@ -1,4 +1,4 @@
-from crnn_stock.crnn import CRNN
+from crnn import CRNN
 from torch import nn
 import torch
 from torch.autograd import Variable

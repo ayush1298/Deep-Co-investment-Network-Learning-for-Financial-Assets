@@ -7,14 +7,15 @@ class CRNN(nn.Module):
     A mixed deep learning framework with Convolution and LSTM
     """
 
-    def __init__(self,feature_num, filters_num, window, ticker_num, hidden_unit_num,hidden_layer_num,dropout_ratio):
-        pass
+    def __init__(self):
+        super(CRNN, self).__init__()
 
-    def weights_init(m):
-        for m in m.modules():
-            if isinstance(m, nn.Conv1d):
-                torch.nn.init.xavier_uniform(m.weight.data)
-                torch.nn.init.xavier_uniform(m.bias.data)
+    def weights_init(self, m):
+        for module in m.modules():
+            if isinstance(module, nn.Conv1d):
+                torch.nn.init.xavier_uniform_(module.weight.data)
+                if module.bias is not None:
+                    torch.nn.init.xavier_uniform_(module.bias.data)
 
     def init_hidden(self):
         pass
@@ -41,9 +42,9 @@ class CRNN(nn.Module):
         # outs=self.out(r_out[:,:,])
         return torch.stack(outs, dim=1)
 
-    def classify_result(self, predicitons):
-        r1 = predicitons.sigmoid()
-        r0 = -predicitons.sigmoid()
+    def classify_result(self, predictions):
+        r1 = predictions.sigmoid()
+        r0 = -predictions.sigmoid()
         result = torch.stack((r1, r0), dim=1).view(-1, 2)
         return result
 
@@ -67,4 +68,3 @@ class Reward_loss(nn.Module):
 class Risk_loss(nn.Module):
     def forward(self, input):
         pass
-

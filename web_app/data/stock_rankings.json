@@ -1,0 +1,14 @@
+{
+  "2012": {
+    "top_stocks": [
+      {
+        "ticker": "NFLX",
+        "company_name": "Netflix Inc.",
+        "return": 298.73
+      }
+    ],
+    "deepcnl_predictions": ["NFLX", "MU", "BBY"],
+    "deepcnl_hits": 6,
+    "hit_ratio": 60.0
+  }
+}

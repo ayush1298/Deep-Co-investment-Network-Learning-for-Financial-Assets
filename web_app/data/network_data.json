@@ -1,0 +1,20 @@
+{
+  "2010": {
+    "nodes": [
+      {
+        "id": "AAPL",
+        "name": "Apple Inc.",
+        "degree": 45,
+        "market_cap": 300000,
+        "top_connections": [
+          {"ticker": "MSFT", "weight": 0.85},
+          {"ticker": "GOOGL", "weight": 0.72},
+          {"ticker": "AMZN", "weight": 0.68}
+        ]
+      }
+    ],
+    "links": [
+      {"source": "AAPL", "target": "MSFT", "weight": 0.85}
+    ]
+  }
+}

@@ -1,0 +1,55 @@
+<!-- templates/rankings.html -->
+{% extends "base.html" %}
+
+{% block content %}
+<div class="container">
+    <div class="row mb-4">
+        <div class="col-md-12">
+            <h2>Stock Ranking & Prediction</h2>
+            <p class="lead">View the top 10 performing S&P 500 stocks and see how well DeepCNL predicted them.</p>
+        </div>
+    </div>
+    
+    <div class="row mb-4">
+        <div class="col-md-6">
+            <label for="yearSelectRanking" class="form-label">Select Year</label>
+            <select class="form-select form-select-lg" id="yearSelectRanking">
+                {% for year in years %}
+                <option value="{{ year }}" {% if year == 2012 %}selected{% endif %}>{{ year }}</option>
+                {% endfor %}
+            </select>
+        </div>
+        <div class="col-md-6">
+            <div class="hit-ratio-card">
+                <div class="hit-ratio-value" id="hitRatioValue">-</div>
+                <div class="hit-ratio-label">DeepCNL Hit Ratio for <span id="selectedYear">2012</span></div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="row">
+        <div class="col-md-12">
+            <div class="rankings-table-container">
+                <h3>Top 10 Performing S&P 500 Stocks for <span id="rankingYear">2012</span></h3>
+                <table class="table table-striped" id="rankingsTable">
+                    <thead>
+                        <tr>
+                            <th>Rank</th>
+                            <th>Ticker</th>
+                            <th>Company Name</th>
+                            <th>Return (%)</th>
+                            <th>DeepCNL Prediction</th>
+                        </tr>
+                    </thead>
+                    <tbody id="rankingsBody">
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
+
+{% block scripts %}
+<script src="{{ url_for('static', filename='js/rankings.js') }}"></script>
+{% endblock %}

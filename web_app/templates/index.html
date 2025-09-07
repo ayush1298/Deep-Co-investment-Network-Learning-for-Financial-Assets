@@ -1,0 +1,60 @@
+<!-- templates/index.html -->
+{% extends "base.html" %}
+
+{% block content %}
+<div class="hero-section">
+    <div class="container text-center">
+        <h1 class="display-4 fw-bold">DeepCNL</h1>
+        <h2 class="h3 text-muted mb-4">A Graph-Based Approach to Equity Forecasting</h2>
+        <p class="lead">
+            Models the S&P 500 as a dynamic "co-investment network" to predict top-performing stocks, 
+            moving beyond traditional correlation methods using deep learning and graph neural networks.
+        </p>
+    </div>
+</div>
+
+<div class="container my-5">
+    <div class="row g-4">
+        <div class="col-md-4">
+            <div class="kpi-card">
+                <div class="kpi-value">{{ "%.2f"|format(kpis.hit_ratio) }}%</div>
+                <div class="kpi-label">Average Hit Ratio</div>
+                <div class="kpi-subtitle">Top-10 Performing Stocks (2010-2016)</div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="kpi-card">
+                <div class="kpi-value">${{ "%.1f"|format(kpis.market_cap) }}B</div>
+                <div class="kpi-label">Financial Influence</div>
+                <div class="kpi-subtitle">Avg. Market Cap of Identified Firms</div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="kpi-card">
+                <div class="kpi-value">{{ "%.1f"|format(kpis.benchmark_improvement) }}x</div>
+                <div class="kpi-label">Benchmark Comparison</div>
+                <div class="kpi-subtitle">Outperforms PCC Baseline</div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="container my-5">
+    <div class="row">
+        <div class="col-md-6">
+            <div class="feature-card">
+                <h3><i class="fas fa-project-diagram"></i> Network Learning</h3>
+                <p>Extract co-investment relationships from LSTM weights to construct dynamic financial networks that evolve over time.</p>
+                <a href="{{ url_for('network') }}" class="btn btn-primary">Explore Networks</a>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="feature-card">
+                <h3><i class="fas fa-chart-line"></i> Stock Prediction</h3>
+                <p>Identify top-performing stocks using graph-based features that capture market structure and investor behavior.</p>
+                <a href="{{ url_for('rankings') }}" class="btn btn-primary">View Rankings</a>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

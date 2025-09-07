@@ -1,0 +1,11 @@
+{
+  "market_cap_comparison": {
+    "deepcnl": 223.1,
+    "pcc": 67.0
+  },
+  "investment_density": {
+    "xlg": {"deepcnl": 0.45, "pcc": 0.32},
+    "oex": {"deepcnl": 0.38, "pcc": 0.41},
+    "iwl": {"deepcnl": 0.28, "pcc": 0.35}
+  }
+}

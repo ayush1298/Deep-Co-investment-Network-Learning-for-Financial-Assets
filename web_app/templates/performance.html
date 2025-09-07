@@ -1,0 +1,43 @@
+<!-- templates/performance.html -->
+{% extends "base.html" %}
+
+{% block content %}
+<div class="container">
+    <div class="row mb-4">
+        <div class="col-md-12">
+            <h2>Performance & Financial Analysis</h2>
+            <p class="lead">Evidence of DeepCNL's superiority over traditional methods through financial metrics and market analysis.</p>
+        </div>
+    </div>
+    
+    <div class="row mb-5">
+        <div class="col-md-12">
+            <h3>Financial Influence Analysis</h3>
+            <p class="text-muted">Identifying Market Leaders</p>
+            <div class="chart-container">
+                <canvas id="marketCapChart"></canvas>
+            </div>
+            <div class="insight-box mt-3">
+                <p><strong>Insight:</strong> DeepCNL is far more effective at identifying large-cap, influential companies that drive the capitalization-weighted S&P 500 index, with an average market cap of $223.1B compared to $67.0B for the PCC baseline.</p>
+            </div>
+        </div>
+    </div>
+    
+    <div class="row">
+        <div class="col-md-12">
+            <h3>Investment Intensity Validation</h3>
+            <p class="text-muted">Consistency with Real-World Investment Principles</p>
+            <div class="chart-container">
+                <canvas id="densityChart"></canvas>
+            </div>
+            <div class="insight-box mt-3">
+                <p><strong>Insight:</strong> The DeepCNL model's results follow the financially logical "XLG > OEX > IWL" order for investment density, confirming the model has learned market structure that aligns with real-world, concentrated investment activities.</p>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
+
+{% block scripts %}
+<script src="{{ url_for('static', filename='js/performance.js') }}"></script>
+{% endblock %}

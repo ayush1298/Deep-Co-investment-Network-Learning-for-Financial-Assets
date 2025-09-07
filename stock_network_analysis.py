@@ -76,13 +76,21 @@ from torch import nn
 from torch.autograd import Variable
 from torch.backends import cudnn
 import networkx as nx
-from crnn_stock.crnn_factory import CRNN_factory
-from crnn_stock.data_util import Data_util
+from crnn_factory import CRNN_factory
+from data_util import Data_util
 import scipy.stats as stats
-from visibility_graph import visibility_graph
-from crnn_stock.wlkernel import WLkernerl
-from fastdtw import fastdtw
-from scipy.spatial.distance import euclidean
+try:
+    from visibility_graph import visibility_graph
+except ImportError:
+    print("Warning: visibility_graph not available. VWL method will not work.")
+    visibility_graph = None
+from wlkernel import WLkernerl
+try:
+    from fastdtw import fastdtw
+    from scipy.spatial.distance import euclidean
+except ImportError:
+    print("Warning: fastdtw not available. DTW method will not work.")
+    fastdtw = None
 import time
 import itertools
 

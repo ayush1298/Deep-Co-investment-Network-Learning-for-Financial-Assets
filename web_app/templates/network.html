@@ -1,0 +1,47 @@
+<!-- templates/network.html -->
+{% extends "base.html" %}
+
+{% block content %}
+<div class="row">
+    <div class="col-md-3">
+        <div class="controls-panel">
+            <h4>Controls</h4>
+            
+            <div class="mb-3">
+                <label for="yearSelect" class="form-label">Year</label>
+                <select class="form-select" id="yearSelect">
+                    {% for year in years %}
+                    <option value="{{ year }}" {% if year == 2012 %}selected{% endif %}>{{ year }}</option>
+                    {% endfor %}
+                </select>
+            </div>
+            
+            <div class="mb-3">
+                <label for="stockSearch" class="form-label">Stock Search</label>
+                <input type="text" class="form-control" id="stockSearch" placeholder="Enter ticker (e.g., AAPL)">
+                <button class="btn btn-secondary btn-sm mt-2" id="searchBtn">Search</button>
+            </div>
+            
+            <div id="stockInfo" class="stock-info" style="display: none;">
+                <h5 id="stockName"></h5>
+                <div id="stockDetails"></div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="col-md-9">
+        <div class="network-container">
+            <div id="networkViz"></div>
+            <div id="loading" class="text-center">
+                <div class="spinner-border" role="status">
+                    <span class="visually-hidden">Loading...</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
+
+{% block scripts %}
+<script src="{{ url_for('static', filename='js/network_viz.js') }}"></script>
+{% endblock %}
