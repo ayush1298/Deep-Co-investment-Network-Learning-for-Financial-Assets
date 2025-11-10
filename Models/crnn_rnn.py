@@ -34,7 +34,7 @@ class CRNN_RNN(CRNN):
             input_size=int(ticker_num * (ticker_num - 1) / 2),
             hidden_size=hidden_unit_num,
             num_layers=hidden_layer_num,
-            dropout=0.15,
+            dropout=dropout_ratio,
             batch_first=True
         )
 

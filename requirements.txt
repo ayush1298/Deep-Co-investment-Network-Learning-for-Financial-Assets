@@ -18,6 +18,7 @@ networkx>=2.6.0
 # Time Series Analysis
 fastdtw>=0.3.4
 visibility-graph>=0.5.1
+ts2vg>=0.2.0
 
 # Web Application Framework
 Flask>=2.0.0
@@ -54,3 +55,6 @@ psutil>=5.8.0
 
 # Logging
 loguru>=0.5.0
+
+pandas-datareader>=0.10.0
+yfinance>=0.2.0

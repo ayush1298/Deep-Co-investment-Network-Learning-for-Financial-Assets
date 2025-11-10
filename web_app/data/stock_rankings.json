@@ -53,16 +53,14 @@
       }
     ],
     "deepcnl_predictions": [
-      "AMZN",
-      "NFLX",
-      "JPM",
-      "AAPL",
+      "BAC",
+      "META",
+      "TSLA",
       "GOOGL",
-      "NVDA",
-      "META"
+      "NVDA"
     ],
-    "deepcnl_hits": 7,
-    "hit_ratio": 70.0
+    "deepcnl_hits": 5,
+    "hit_ratio": 50.0
   },
   "2011": {
     "top_stocks": [
@@ -118,14 +116,13 @@
       }
     ],
     "deepcnl_predictions": [
-      "AAPL",
-      "NFLX",
-      "NVDA",
-      "TSLA",
-      "JPM"
+      "GOOGL",
+      "AMZN",
+      "BAC",
+      "NVDA"
     ],
-    "deepcnl_hits": 5,
-    "hit_ratio": 50.0
+    "deepcnl_hits": 4,
+    "hit_ratio": 40.0
   },
   "2012": {
     "top_stocks": [
@@ -181,14 +178,13 @@
       }
     ],
     "deepcnl_predictions": [
-      "NFLX",
-      "AMZN",
-      "NVDA",
       "AAPL",
-      "TSLA"
+      "BAC",
+      "NVDA",
+      "JPM"
     ],
-    "deepcnl_hits": 5,
-    "hit_ratio": 50.0
+    "deepcnl_hits": 4,
+    "hit_ratio": 40.0
   },
   "2013": {
     "top_stocks": [
@@ -244,16 +240,15 @@
       }
     ],
     "deepcnl_predictions": [
-      "JPM",
-      "GOOGL",
-      "BAC",
-      "NFLX",
-      "AMZN",
+      "NVDA",
       "AAPL",
-      "TSLA"
+      "TSLA",
+      "BAC",
+      "AMZN",
+      "META"
     ],
-    "deepcnl_hits": 7,
-    "hit_ratio": 70.0
+    "deepcnl_hits": 6,
+    "hit_ratio": 60.0
   },
   "2014": {
     "top_stocks": [
@@ -309,16 +304,14 @@
       }
     ],
     "deepcnl_predictions": [
-      "AAPL",
+      "TSLA",
       "META",
       "NVDA",
-      "TSLA",
-      "AMZN",
-      "NFLX",
+      "JPM",
       "MSFT"
     ],
-    "deepcnl_hits": 7,
-    "hit_ratio": 70.0
+    "deepcnl_hits": 5,
+    "hit_ratio": 50.0
   },
   "2015": {
     "top_stocks": [
@@ -374,16 +367,14 @@
       }
     ],
     "deepcnl_predictions": [
-      "TSLA",
       "MSFT",
-      "AMZN",
-      "JPM",
+      "NFLX",
       "META",
-      "NVDA",
+      "TSLA",
       "BAC"
     ],
-    "deepcnl_hits": 7,
-    "hit_ratio": 70.0
+    "deepcnl_hits": 5,
+    "hit_ratio": 50.0
   },
   "2016": {
     "top_stocks": [
@@ -439,13 +430,12 @@
       }
     ],
     "deepcnl_predictions": [
-      "NFLX",
-      "BAC",
-      "AAPL",
-      "GOOGL",
-      "TSLA"
+      "TSLA",
+      "JPM",
+      "MSFT",
+      "BAC"
     ],
-    "deepcnl_hits": 5,
-    "hit_ratio": 50.0
+    "deepcnl_hits": 4,
+    "hit_ratio": 40.0
   }
 }

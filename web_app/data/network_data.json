@@ -4,200 +4,200 @@
       {
         "id": "AAPL",
         "name": "AAPL Inc.",
-        "degree": 6,
-        "market_cap": 429747,
+        "degree": 13,
+        "market_cap": 317594,
         "top_connections": [
           {
             "ticker": "MSFT",
-            "weight": 0.22930816645550978
+            "weight": 0.9479288559075671
           },
           {
             "ticker": "GOOGL",
-            "weight": 0.5515780752904964
+            "weight": 0.9305422370035105
           },
           {
             "ticker": "AMZN",
-            "weight": 0.08010477800618032
+            "weight": 0.9639783050956333
           }
         ]
       },
       {
         "id": "MSFT",
         "name": "MSFT Inc.",
-        "degree": 9,
-        "market_cap": 70357,
+        "degree": 21,
+        "market_cap": 214038,
         "top_connections": [
           {
             "ticker": "GOOGL",
-            "weight": 0.20771221908516346
+            "weight": 0.7213818570240857
           },
           {
             "ticker": "AMZN",
-            "weight": 0.044111754095327305
+            "weight": 0.19512941597620515
           },
           {
             "ticker": "TSLA",
-            "weight": 0.9073163119733525
+            "weight": 0.8052054448183423
           }
         ]
       },
       {
         "id": "GOOGL",
         "name": "GOOGL Inc.",
-        "degree": 9,
-        "market_cap": 172567,
+        "degree": 20,
+        "market_cap": 339634,
         "top_connections": [
           {
             "ticker": "AMZN",
-            "weight": 0.7341124922358991
+            "weight": 0.21936733122823016
           },
           {
             "ticker": "TSLA",
-            "weight": 0.8610307698733147
+            "weight": 0.36416038303743137
           },
           {
             "ticker": "META",
-            "weight": 0.15810239119252079
+            "weight": 0.329563957945899
           }
         ]
       },
       {
         "id": "AMZN",
         "name": "AMZN Inc.",
-        "degree": 20,
-        "market_cap": 240330,
+        "degree": 12,
+        "market_cap": 262630,
         "top_connections": [
           {
             "ticker": "TSLA",
-            "weight": 0.2117309410189141
+            "weight": 0.2964681191108153
           },
           {
             "ticker": "META",
-            "weight": 0.7490462181527635
+            "weight": 0.7828344792652366
           },
           {
             "ticker": "NVDA",
-            "weight": 0.0639701774060002
+            "weight": 0.5549821229921434
           }
         ]
       },
       {
         "id": "TSLA",
         "name": "TSLA Inc.",
-        "degree": 8,
-        "market_cap": 468262,
+        "degree": 5,
+        "market_cap": 192742,
         "top_connections": [
           {
             "ticker": "META",
-            "weight": 0.3265964780200511
+            "weight": 0.8597540206126487
           },
           {
             "ticker": "NVDA",
-            "weight": 0.3683782737536685
+            "weight": 0.06900105211092733
           },
           {
             "ticker": "NFLX",
-            "weight": 0.5207448801947016
+            "weight": 0.8883721380968218
           }
         ]
       },
       {
         "id": "META",
         "name": "META Inc.",
-        "degree": 11,
-        "market_cap": 180129,
+        "degree": 12,
+        "market_cap": 425072,
         "top_connections": [
           {
             "ticker": "NVDA",
-            "weight": 0.11565922399080797
+            "weight": 0.2315029038804457
           },
           {
             "ticker": "NFLX",
-            "weight": 0.5284540965648217
+            "weight": 0.36767741502165574
           },
           {
             "ticker": "BAC",
-            "weight": 0.7667289449521109
+            "weight": 0.513026792451475
           }
         ]
       },
       {
         "id": "NVDA",
         "name": "NVDA Inc.",
-        "degree": 17,
-        "market_cap": 454392,
+        "degree": 6,
+        "market_cap": 156410,
         "top_connections": [
           {
             "ticker": "NFLX",
-            "weight": 0.6632978694924873
+            "weight": 0.5005206574748392
           },
           {
             "ticker": "BAC",
-            "weight": 0.40702931523511743
+            "weight": 0.7864091312967099
           },
           {
             "ticker": "JPM",
-            "weight": 0.9268546382394333
+            "weight": 0.3929192592541443
           }
         ]
       },
       {
         "id": "NFLX",
         "name": "NFLX Inc.",
-        "degree": 9,
-        "market_cap": 481055,
+        "degree": 15,
+        "market_cap": 423186,
         "top_connections": [
           {
             "ticker": "BAC",
-            "weight": 0.20082983959181377
+            "weight": 0.7939224739292553
           },
           {
             "ticker": "JPM",
-            "weight": 0.5000024795810324
+            "weight": 0.43229008414883174
           },
           {
             "ticker": "AAPL",
-            "weight": 0.6719851767279001
+            "weight": 0.44261668376839425
           }
         ]
       },
       {
         "id": "BAC",
         "name": "BAC Inc.",
-        "degree": 10,
-        "market_cap": 153581,
+        "degree": 16,
+        "market_cap": 459403,
         "top_connections": [
           {
             "ticker": "JPM",
-            "weight": 0.8673202648720513
+            "weight": 0.016969219394654567
           },
           {
             "ticker": "AAPL",
-            "weight": 0.6273482564124426
+            "weight": 0.5939794619057864
           },
           {
             "ticker": "MSFT",
-            "weight": 0.5034885006870992
+            "weight": 0.494757472386968
           }
         ]
       },
       {
         "id": "JPM",
         "name": "JPM Inc.",
-        "degree": 19,
-        "market_cap": 373942,
+        "degree": 9,
+        "market_cap": 327546,
         "top_connections": [
           {
             "ticker": "AAPL",
-            "weight": 0.2880824031190763
+            "weight": 0.5614638835309291
           },
           {
             "ticker": "MSFT",
-            "weight": 0.9333430193685217
+            "weight": 0.5158060298272134
           },
           {
             "ticker": "GOOGL",
-            "weight": 0.7695121957841886
+            "weight": 0.1111896417000634
           }
         ]
       }
@@ -206,122 +206,122 @@
       {
         "source": "AAPL",
         "target": "MSFT",
-        "weight": 0.49993329894107463
+        "weight": 0.8263312710898323
       },
       {
         "source": "AAPL",
         "target": "GOOGL",
-        "weight": 0.6047225211960938
+        "weight": 0.4894968023015541
       },
       {
         "source": "AAPL",
         "target": "AMZN",
-        "weight": 0.264162692116794
+        "weight": 0.7802560823859842
       },
       {
         "source": "MSFT",
         "target": "GOOGL",
-        "weight": 0.023650442881488987
+        "weight": 0.3391237157268213
       },
       {
         "source": "MSFT",
         "target": "AMZN",
-        "weight": 0.23815830216871037
+        "weight": 0.5562092344389213
       },
       {
         "source": "MSFT",
         "target": "TSLA",
-        "weight": 0.7437472744351455
+        "weight": 0.43057253758965575
       },
       {
         "source": "GOOGL",
         "target": "AMZN",
-        "weight": 0.6811069100118086
+        "weight": 0.3586145296652318
       },
       {
         "source": "GOOGL",
         "target": "TSLA",
-        "weight": 0.33087060975544447
+        "weight": 0.06970813272876375
       },
       {
         "source": "GOOGL",
         "target": "META",
-        "weight": 0.456287436530475
+        "weight": 0.6876295474813272
       },
       {
         "source": "AMZN",
         "target": "TSLA",
-        "weight": 0.7550832223944975
+        "weight": 0.847115028946782
       },
       {
         "source": "AMZN",
         "target": "META",
-        "weight": 0.8901136901363847
+        "weight": 0.5519995184089947
       },
       {
         "source": "AMZN",
         "target": "NVDA",
-        "weight": 0.08584099555720315
+        "weight": 0.9676078386771788
       },
       {
         "source": "TSLA",
         "target": "META",
-        "weight": 0.49315164137635736
+        "weight": 0.7605965590590832
       },
       {
         "source": "TSLA",
         "target": "NVDA",
-        "weight": 0.504589529448216
+        "weight": 0.12473460843986228
       },
       {
         "source": "TSLA",
         "target": "NFLX",
-        "weight": 0.0050874250561331325
+        "weight": 0.470063488491151
       },
       {
         "source": "META",
         "target": "NVDA",
-        "weight": 0.5541826299556234
+        "weight": 0.4926766597242578
       },
       {
         "source": "META",
         "target": "NFLX",
-        "weight": 0.5427936224903137
+        "weight": 0.451829379179683
       },
       {
         "source": "META",
         "target": "BAC",
-        "weight": 0.2936192502029792
+        "weight": 0.17735581509264253
       },
       {
         "source": "NVDA",
         "target": "NFLX",
-        "weight": 0.682324725724336
+        "weight": 0.536476281297317
       },
       {
         "source": "NVDA",
         "target": "BAC",
-        "weight": 0.8651149435970158
+        "weight": 0.4535958472100651
       },
       {
         "source": "NVDA",
         "target": "JPM",
-        "weight": 0.309198602852213
+        "weight": 0.2223487282451324
       },
       {
         "source": "NFLX",
         "target": "BAC",
-        "weight": 0.4004506552833006
+        "weight": 0.8025346194358932
       },
       {
         "source": "NFLX",
         "target": "JPM",
-        "weight": 0.7870339122451484
+        "weight": 0.4817004399687521
       },
       {
         "source": "BAC",
         "target": "JPM",
-        "weight": 0.8636207520213742
+        "weight": 0.9737673654977397
       }
     ]
   },
@@ -330,80 +330,80 @@
       {
         "id": "AAPL",
         "name": "AAPL Inc.",
-        "degree": 14,
-        "market_cap": 148965,
+        "degree": 11,
+        "market_cap": 182927,
         "top_connections": [
           {
             "ticker": "MSFT",
-            "weight": 0.5140234476733927
+            "weight": 0.7681109512552386
           },
           {
             "ticker": "GOOGL",
-            "weight": 0.389220842283275
+            "weight": 0.011934608963361737
           },
           {
             "ticker": "AMZN",
-            "weight": 0.9952757445868315
+            "weight": 0.7312579132425213
           }
         ]
       },
       {
         "id": "MSFT",
         "name": "MSFT Inc.",
-        "degree": 20,
-        "market_cap": 90162,
+        "degree": 15,
+        "market_cap": 302586,
         "top_connections": [
           {
             "ticker": "GOOGL",
-            "weight": 0.8141070471194614
+            "weight": 0.929779454428201
           },
           {
             "ticker": "AMZN",
-            "weight": 0.7677394757534449
+            "weight": 0.2423206509908694
           },
           {
             "ticker": "TSLA",
-            "weight": 0.1959487992813248
+            "weight": 0.4155079442809717
           }
         ]
       },
       {
         "id": "GOOGL",
         "name": "GOOGL Inc.",
-        "degree": 10,
-        "market_cap": 228603,
+        "degree": 19,
+        "market_cap": 229261,
         "top_connections": [
           {
             "ticker": "AMZN",
-            "weight": 0.5455939289807376
+            "weight": 0.9778494789188451
           },
           {
             "ticker": "TSLA",
-            "weight": 0.5445872725641667
+            "weight": 0.7901745342547818
           },
           {
             "ticker": "META",
-            "weight": 0.8776549967311383
+            "weight": 0.684400442538626
           }
         ]
       },
       {
         "id": "AMZN",
         "name": "AMZN Inc.",
-        "degree": 9,
-        "market_cap": 475321,
+        "degree": 20,
+        "market_cap": 485015,
         "top_connections": [
           {
             "ticker": "TSLA",
-            "weight": 0.2472851709873357
+            "weight": 0.06945455660617361
           },
           {
             "ticker": "META",
-            "weight": 0.3610028329143179
+            "weight": 0.8595554965207227
           },
           {
             "ticker": "NVDA",
-            "weight": 0.2647611696929285
+            "weight": 0.82433797231352
           }
         ]
       },
@@ -411,119 +411,119 @@
         "id": "TSLA",
         "name": "TSLA Inc.",
         "degree": 6,
-        "market_cap": 141253,
+        "market_cap": 107108,
         "top_connections": [
           {
             "ticker": "META",
-            "weight": 0.06431872516322568
+            "weight": 0.900953499446846
           },
           {
             "ticker": "NVDA",
-            "weight": 0.0623075967736022
+            "weight": 0.2313410801757465
           },
           {
             "ticker": "NFLX",
-            "weight": 0.14367108543327312
+            "weight": 0.8960723790302344
           }
         ]
       },
       {
         "id": "META",
         "name": "META Inc.",
-        "degree": 11,
-        "market_cap": 314361,
+        "degree": 12,
+        "market_cap": 388340,
         "top_connections": [
           {
             "ticker": "NVDA",
-            "weight": 0.24578368834442732
+            "weight": 0.7329988135691875
           },
           {
             "ticker": "NFLX",
-            "weight": 0.3312751061005923
+            "weight": 0.3453336724866638
           },
           {
             "ticker": "BAC",
-            "weight": 0.9097678454962527
+            "weight": 0.09922904820010814
           }
         ]
       },
       {
         "id": "NVDA",
         "name": "NVDA Inc.",
-        "degree": 16,
-        "market_cap": 122608,
+        "degree": 6,
+        "market_cap": 123244,
         "top_connections": [
           {
             "ticker": "NFLX",
-            "weight": 0.35106561251146196
+            "weight": 0.7511215776792275
           },
           {
             "ticker": "BAC",
-            "weight": 0.7904234468054476
+            "weight": 0.8567255837413824
           },
           {
             "ticker": "JPM",
-            "weight": 0.7286331198860381
+            "weight": 0.49768936904841443
           }
         ]
       },
       {
         "id": "NFLX",
         "name": "NFLX Inc.",
-        "degree": 19,
-        "market_cap": 179275,
+        "degree": 14,
+        "market_cap": 426419,
         "top_connections": [
           {
             "ticker": "BAC",
-            "weight": 0.8821838525143143
+            "weight": 0.37301642335499485
           },
           {
             "ticker": "JPM",
-            "weight": 0.1638088560774985
+            "weight": 0.6532146147993049
           },
           {
             "ticker": "AAPL",
-            "weight": 0.9258373802161263
+            "weight": 0.12393250997554495
           }
         ]
       },
       {
         "id": "BAC",
         "name": "BAC Inc.",
-        "degree": 10,
-        "market_cap": 291253,
+        "degree": 19,
+        "market_cap": 164812,
         "top_connections": [
           {
             "ticker": "JPM",
-            "weight": 0.7650232961512484
+            "weight": 0.448179338059144
           },
           {
             "ticker": "AAPL",
-            "weight": 0.8788420249488513
+            "weight": 0.2772727607218557
           },
           {
             "ticker": "MSFT",
-            "weight": 0.38407741460771594
+            "weight": 0.4643495381286131
           }
         ]
       },
       {
         "id": "JPM",
         "name": "JPM Inc.",
-        "degree": 12,
-        "market_cap": 221265,
+        "degree": 9,
+        "market_cap": 273767,
         "top_connections": [
           {
             "ticker": "AAPL",
-            "weight": 0.6670653707653126
+            "weight": 0.05852732086716328
           },
           {
             "ticker": "MSFT",
-            "weight": 0.5329718904469953
+            "weight": 0.8321568123210163
           },
           {
             "ticker": "GOOGL",
-            "weight": 0.10128107346448789
+            "weight": 0.09320733389481206
           }
         ]
       }
@@ -532,122 +532,122 @@
       {
         "source": "AAPL",
         "target": "MSFT",
-        "weight": 0.6111389346443667
+        "weight": 0.23296824992439413
       },
       {
         "source": "AAPL",
         "target": "GOOGL",
-        "weight": 0.09383498511741228
+        "weight": 0.3725929285187969
       },
       {
         "source": "AAPL",
         "target": "AMZN",
-        "weight": 0.3637147341712883
+        "weight": 0.8657510525515506
       },
       {
         "source": "MSFT",
         "target": "GOOGL",
-        "weight": 0.7347608649960106
+        "weight": 0.9884185587938547
       },
       {
         "source": "MSFT",
         "target": "AMZN",
-        "weight": 0.40938519432784226
+        "weight": 0.43185379168492743
       },
       {
         "source": "MSFT",
         "target": "TSLA",
-        "weight": 0.2913267895960191
+        "weight": 0.29970727852634826
       },
       {
         "source": "GOOGL",
         "target": "AMZN",
-        "weight": 0.12597077436036275
+        "weight": 0.43627431832363883
       },
       {
         "source": "GOOGL",
         "target": "TSLA",
-        "weight": 0.8783753270795706
+        "weight": 0.8495003480819218
       },
       {
         "source": "GOOGL",
         "target": "META",
-        "weight": 0.017696076331364607
+        "weight": 0.9022300206749908
       },
       {
         "source": "AMZN",
         "target": "TSLA",
-        "weight": 0.51033846990203
+        "weight": 0.35162381319112146
       },
       {
         "source": "AMZN",
         "target": "META",
-        "weight": 0.14805914309645962
+        "weight": 0.9895380461249271
       },
       {
         "source": "AMZN",
         "target": "NVDA",
-        "weight": 0.12564932260316664
+        "weight": 0.827941120399897
       },
       {
         "source": "TSLA",
         "target": "META",
-        "weight": 0.3772820514822295
+        "weight": 0.6083893685567663
       },
       {
         "source": "TSLA",
         "target": "NVDA",
-        "weight": 0.11511320882808274
+        "weight": 0.13683479025206968
       },
       {
         "source": "TSLA",
         "target": "NFLX",
-        "weight": 0.5760727058387073
+        "weight": 0.7042382952560249
       },
       {
         "source": "META",
         "target": "NVDA",
-        "weight": 0.4060762607297226
+        "weight": 0.12774884500315953
       },
       {
         "source": "META",
         "target": "NFLX",
-        "weight": 0.3851932550412269
+        "weight": 0.4270755778004033
       },
       {
         "source": "META",
         "target": "BAC",
-        "weight": 0.42707228983889023
+        "weight": 0.04582977795231258
       },
       {
         "source": "NVDA",
         "target": "NFLX",
-        "weight": 0.4849789311823095
+        "weight": 0.5537354357187052
       },
       {
         "source": "NVDA",
         "target": "BAC",
-        "weight": 0.058760038903156064
+        "weight": 0.37182512548652535
       },
       {
         "source": "NVDA",
         "target": "JPM",
-        "weight": 0.5727564283648984
+        "weight": 0.13221331663538594
       },
       {
         "source": "NFLX",
         "target": "BAC",
-        "weight": 0.48645805678899556
+        "weight": 0.03786679466385878
       },
       {
         "source": "NFLX",
         "target": "JPM",
-        "weight": 0.4669271567054927
+        "weight": 0.3218975262290219
       },
       {
         "source": "BAC",
         "target": "JPM",
-        "weight": 0.7921299495908112
+        "weight": 0.8048641325184888
       }
     ]
   },
@@ -656,120 +656,120 @@
       {
         "id": "AAPL",
         "name": "AAPL Inc.",
-        "degree": 8,
-        "market_cap": 335332,
+        "degree": 22,
+        "market_cap": 474593,
         "top_connections": [
           {
             "ticker": "MSFT",
-            "weight": 0.8349756647625117
+            "weight": 0.8377623514746529
           },
           {
             "ticker": "GOOGL",
-            "weight": 0.11464160611466478
+            "weight": 0.717212825011269
           },
           {
             "ticker": "AMZN",
-            "weight": 0.13383382396687138
+            "weight": 0.2593678166429211
           }
         ]
       },
       {
         "id": "MSFT",
         "name": "MSFT Inc.",
-        "degree": 9,
-        "market_cap": 482510,
+        "degree": 18,
+        "market_cap": 377781,
         "top_connections": [
           {
             "ticker": "GOOGL",
-            "weight": 0.874938178526255
+            "weight": 0.3969890142264798
           },
           {
             "ticker": "AMZN",
-            "weight": 0.4410682263301716
+            "weight": 0.232821648602058
           },
           {
             "ticker": "TSLA",
-            "weight": 0.6292892015770054
+            "weight": 0.00871393906839657
           }
         ]
       },
       {
         "id": "GOOGL",
         "name": "GOOGL Inc.",
-        "degree": 7,
-        "market_cap": 361304,
+        "degree": 11,
+        "market_cap": 304991,
         "top_connections": [
           {
             "ticker": "AMZN",
-            "weight": 0.5740130037546837
+            "weight": 0.1924981588860002
           },
           {
             "ticker": "TSLA",
-            "weight": 0.7376975653382076
+            "weight": 0.22941427802514325
           },
           {
             "ticker": "META",
-            "weight": 0.011516303423091956
+            "weight": 0.03269239456599293
           }
         ]
       },
       {
         "id": "AMZN",
         "name": "AMZN Inc.",
-        "degree": 23,
-        "market_cap": 64801,
+        "degree": 8,
+        "market_cap": 400625,
         "top_connections": [
           {
             "ticker": "TSLA",
-            "weight": 0.14998344357885196
+            "weight": 0.516867890806459
           },
           {
             "ticker": "META",
-            "weight": 0.25344973931793124
+            "weight": 0.8087445711350639
           },
           {
             "ticker": "NVDA",
-            "weight": 0.4993054675470685
+            "weight": 0.012211024534490189
           }
         ]
       },
       {
         "id": "TSLA",
         "name": "TSLA Inc.",
-        "degree": 9,
-        "market_cap": 180588,
+        "degree": 17,
+        "market_cap": 271123,
         "top_connections": [
           {
             "ticker": "META",
-            "weight": 0.4465630577570998
+            "weight": 0.25535219011545474
           },
           {
             "ticker": "NVDA",
-            "weight": 0.6573760025169877
+            "weight": 0.9919934470168638
           },
           {
             "ticker": "NFLX",
-            "weight": 0.8320264272527776
+            "weight": 0.7326163281113502
           }
         ]
       },
       {
         "id": "META",
         "name": "META Inc.",
-        "degree": 16,
-        "market_cap": 189406,
+        "degree": 11,
+        "market_cap": 304937,
         "top_connections": [
           {
             "ticker": "NVDA",
-            "weight": 0.3705499479672836
+            "weight": 0.9218793321013552
           },
           {
             "ticker": "NFLX",
-            "weight": 0.5922376950259354
+            "weight": 0.7706215147307942
           },
           {
             "ticker": "BAC",
-            "weight": 0.9983358228389081
+            "weight": 0.6222696536199813
           }
         ]
       },
@@ -777,79 +777,79 @@
         "id": "NVDA",
         "name": "NVDA Inc.",
         "degree": 6,
-        "market_cap": 119505,
+        "market_cap": 476063,
         "top_connections": [
           {
             "ticker": "NFLX",
-            "weight": 0.37707785531479265
+            "weight": 0.16376038966720896
           },
           {
             "ticker": "BAC",
-            "weight": 0.0354947533300255
+            "weight": 0.6165181860527669
           },
           {
             "ticker": "JPM",
-            "weight": 0.8593196169149904
+            "weight": 0.2184759403091604
           }
         ]
       },
       {
         "id": "NFLX",
         "name": "NFLX Inc.",
-        "degree": 13,
-        "market_cap": 141347,
+        "degree": 8,
+        "market_cap": 337964,
         "top_connections": [
           {
             "ticker": "BAC",
-            "weight": 0.5171684418618596
+            "weight": 0.7934883318381405
           },
           {
             "ticker": "JPM",
-            "weight": 0.006174891401365845
+            "weight": 0.6947526315978474
           },
           {
             "ticker": "AAPL",
-            "weight": 0.6467426081355492
+            "weight": 0.9759712319279434
           }
         ]
       },
       {
         "id": "BAC",
         "name": "BAC Inc.",
-        "degree": 11,
-        "market_cap": 59456,
+        "degree": 18,
+        "market_cap": 434217,
         "top_connections": [
           {
             "ticker": "JPM",
-            "weight": 0.8402566136746932
+            "weight": 0.8722812585500702
           },
           {
             "ticker": "AAPL",
-            "weight": 0.4573703022862099
+            "weight": 0.6765431630303855
           },
           {
             "ticker": "MSFT",
-            "weight": 0.6566641902845174
+            "weight": 0.0916138951114277
           }
         ]
       },
       {
         "id": "JPM",
         "name": "JPM Inc.",
-        "degree": 18,
-        "market_cap": 155100,
+        "degree": 19,
+        "market_cap": 140788,
         "top_connections": [
           {
             "ticker": "AAPL",
-            "weight": 0.5776624936258393
+            "weight": 0.3184405784318457
           },
           {
             "ticker": "MSFT",
-            "weight": 0.984554325466272
+            "weight": 0.0790935602354349
           },
           {
             "ticker": "GOOGL",
-            "weight": 0.8562041945172106
+            "weight": 0.7471949165481451
           }
         ]
       }
@@ -858,122 +858,122 @@
       {
         "source": "AAPL",
         "target": "MSFT",
-        "weight": 0.18399932057754442
+        "weight": 0.0453350043459082
       },
       {
         "source": "AAPL",
         "target": "GOOGL",
-        "weight": 0.6120717631885702
+        "weight": 0.20413454162740152
       },
       {
         "source": "AAPL",
         "target": "AMZN",
-        "weight": 0.9391063194561892
+        "weight": 0.6594157760902227
       },
       {
         "source": "MSFT",
         "target": "GOOGL",
-        "weight": 0.9741405859728018
+        "weight": 0.9368596489111668
       },
       {
         "source": "MSFT",
         "target": "AMZN",
-        "weight": 0.7214971552996851
+        "weight": 0.29034164176960264
       },
       {
         "source": "MSFT",
         "target": "TSLA",
-        "weight": 0.333108836550043
+        "weight": 0.05644614999278863
       },
       {
         "source": "GOOGL",
         "target": "AMZN",
-        "weight": 0.39053652939090266
+        "weight": 0.05902676736741075
       },
       {
         "source": "GOOGL",
         "target": "TSLA",
-        "weight": 0.9913278188647026
+        "weight": 0.999332581133191
       },
       {
         "source": "GOOGL",
         "target": "META",
-        "weight": 0.17330163694111844
+        "weight": 0.18171307268760206
       },
       {
         "source": "AMZN",
         "target": "TSLA",
-        "weight": 0.23213723770243722
+        "weight": 0.46961227325585264
       },
       {
         "source": "AMZN",
         "target": "META",
-        "weight": 0.1390665964309341
+        "weight": 0.4413421973738194
       },
       {
         "source": "AMZN",
         "target": "NVDA",
-        "weight": 0.20004786763429305
+        "weight": 0.028719617470932768
       },
       {
         "source": "TSLA",
         "target": "META",
-        "weight": 0.7932245664758449
+        "weight": 0.3848930741515202
       },
       {
         "source": "TSLA",
         "target": "NVDA",
-        "weight": 0.9407677659895718
+        "weight": 0.4302014002730983
       },
       {
         "source": "TSLA",
         "target": "NFLX",
-        "weight": 0.030714912268194672
+        "weight": 0.38447993329850916
       },
       {
         "source": "META",
         "target": "NVDA",
-        "weight": 0.7590746227870941
+        "weight": 0.891487233786314
       },
       {
         "source": "META",
         "target": "NFLX",
-        "weight": 0.9376196336592135
+        "weight": 0.07610533148888965
       },
       {
         "source": "META",
         "target": "BAC",
-        "weight": 0.1221309049274183
+        "weight": 0.5458496218565173
       },
       {
         "source": "NVDA",
         "target": "NFLX",
-        "weight": 0.6945729340583443
+        "weight": 0.5909539436876791
       },
       {
         "source": "NVDA",
         "target": "BAC",
-        "weight": 0.35074476543085753
+        "weight": 0.7631838706044206
       },
       {
         "source": "NVDA",
         "target": "JPM",
-        "weight": 0.8580165853152596
+        "weight": 0.6673764884983343
       },
       {
         "source": "NFLX",
         "target": "BAC",
-        "weight": 0.029453205127286997
+        "weight": 0.45268833302928546
       },
       {
         "source": "NFLX",
         "target": "JPM",
-        "weight": 0.1875828653122259
+        "weight": 0.3334947041095164
       },
       {
         "source": "BAC",
         "target": "JPM",
-        "weight": 0.5410174061362786
+        "weight": 0.36059015393497496
       }
     ]
   },
@@ -982,200 +982,200 @@
       {
         "id": "AAPL",
         "name": "AAPL Inc.",
-        "degree": 6,
-        "market_cap": 339839,
+        "degree": 23,
+        "market_cap": 171707,
         "top_connections": [
           {
             "ticker": "MSFT",
-            "weight": 0.023630209492889964
+            "weight": 0.8006756283830317
           },
           {
             "ticker": "GOOGL",
-            "weight": 0.8716787743277393
+            "weight": 0.29913725125039514
           },
           {
             "ticker": "AMZN",
-            "weight": 0.9552301101314455
+            "weight": 0.7268235201649726
           }
         ]
       },
       {
         "id": "MSFT",
         "name": "MSFT Inc.",
-        "degree": 8,
-        "market_cap": 243811,
+        "degree": 5,
+        "market_cap": 383626,
         "top_connections": [
           {
             "ticker": "GOOGL",
-            "weight": 0.2395445815362668
+            "weight": 0.5065403828052942
           },
           {
             "ticker": "AMZN",
-            "weight": 0.05062943991042257
+            "weight": 0.23303834259342182
           },
           {
             "ticker": "TSLA",
-            "weight": 0.8421369607819684
+            "weight": 0.7082531684207352
           }
         ]
       },
       {
         "id": "GOOGL",
         "name": "GOOGL Inc.",
-        "degree": 5,
-        "market_cap": 391847,
+        "degree": 14,
+        "market_cap": 446689,
         "top_connections": [
           {
             "ticker": "AMZN",
-            "weight": 0.3483883534886302
+            "weight": 0.8748128093686007
           },
           {
             "ticker": "TSLA",
-            "weight": 0.5523732724801007
+            "weight": 0.4009685090955033
           },
           {
             "ticker": "META",
-            "weight": 0.10761544573259552
+            "weight": 0.7612122936042314
           }
         ]
       },
       {
         "id": "AMZN",
         "name": "AMZN Inc.",
-        "degree": 8,
-        "market_cap": 487797,
+        "degree": 16,
+        "market_cap": 442137,
         "top_connections": [
           {
             "ticker": "TSLA",
-            "weight": 0.14513034828359928
+            "weight": 0.8603543370131039
           },
           {
             "ticker": "META",
-            "weight": 0.446407807190081
+            "weight": 0.1351087584376155
           },
           {
             "ticker": "NVDA",
-            "weight": 0.26984311539532957
+            "weight": 0.5126323927006469
           }
         ]
       },
       {
         "id": "TSLA",
         "name": "TSLA Inc.",
-        "degree": 18,
-        "market_cap": 288683,
+        "degree": 19,
+        "market_cap": 193173,
         "top_connections": [
           {
             "ticker": "META",
-            "weight": 0.4756338400276705
+            "weight": 0.014868872985055903
           },
           {
             "ticker": "NVDA",
-            "weight": 0.1442405632639039
+            "weight": 0.9222558600809306
           },
           {
             "ticker": "NFLX",
-            "weight": 0.9544668744444992
+            "weight": 0.6709897597472653
           }
         ]
       },
       {
         "id": "META",
         "name": "META Inc.",
-        "degree": 17,
-        "market_cap": 134200,
+        "degree": 12,
+        "market_cap": 261317,
         "top_connections": [
           {
             "ticker": "NVDA",
-            "weight": 0.09602041049523369
+            "weight": 0.11755081106482113
           },
           {
             "ticker": "NFLX",
-            "weight": 0.5936698845071586
+            "weight": 0.2012711031082639
           },
           {
             "ticker": "BAC",
-            "weight": 0.5682561473759378
+            "weight": 0.26418823050073514
           }
         ]
       },
       {
         "id": "NVDA",
         "name": "NVDA Inc.",
-        "degree": 14,
-        "market_cap": 394467,
+        "degree": 19,
+        "market_cap": 299688,
         "top_connections": [
           {
             "ticker": "NFLX",
-            "weight": 0.9633809420602396
+            "weight": 0.5782344143940631
           },
           {
             "ticker": "BAC",
-            "weight": 0.6614049898354087
+            "weight": 0.34775595379599655
           },
           {
             "ticker": "JPM",
-            "weight": 0.4131026791547885
+            "weight": 0.4182951826195348
           }
         ]
       },
       {
         "id": "NFLX",
         "name": "NFLX Inc.",
-        "degree": 11,
-        "market_cap": 218458,
+        "degree": 22,
+        "market_cap": 459748,
         "top_connections": [
           {
             "ticker": "BAC",
-            "weight": 0.47383115334127135
+            "weight": 0.9618523029332396
           },
           {
             "ticker": "JPM",
-            "weight": 0.9777922850919781
+            "weight": 0.24897794946699292
           },
           {
             "ticker": "AAPL",
-            "weight": 0.9419321610343524
+            "weight": 0.12173429763305654
           }
         ]
       },
       {
         "id": "BAC",
         "name": "BAC Inc.",
-        "degree": 18,
-        "market_cap": 348858,
+        "degree": 10,
+        "market_cap": 333604,
         "top_connections": [
           {
             "ticker": "JPM",
-            "weight": 0.7156944707393308
+            "weight": 0.1829763826742994
           },
           {
             "ticker": "AAPL",
-            "weight": 0.18656156767398713
+            "weight": 0.46278540649414923
           },
           {
             "ticker": "MSFT",
-            "weight": 0.04898136511612472
+            "weight": 0.6432659891622506
           }
         ]
       },
       {
         "id": "JPM",
         "name": "JPM Inc.",
-        "degree": 9,
-        "market_cap": 62423,
+        "degree": 16,
+        "market_cap": 487174,
         "top_connections": [
           {
             "ticker": "AAPL",
-            "weight": 0.0836082233987715
+            "weight": 0.07504430273855567
           },
           {
             "ticker": "MSFT",
-            "weight": 0.17657762277583078
+            "weight": 0.907600858597273
           },
           {
             "ticker": "GOOGL",
-            "weight": 0.6868634871501219
+            "weight": 0.5279795660073211
           }
         ]
       }
@@ -1184,122 +1184,122 @@
       {
         "source": "AAPL",
         "target": "MSFT",
-        "weight": 0.19076384735395824
+        "weight": 0.25929233119498796
       },
       {
         "source": "AAPL",
         "target": "GOOGL",
-        "weight": 0.7005549095172187
+        "weight": 0.2762452821584609
       },
       {
         "source": "AAPL",
         "target": "AMZN",
-        "weight": 0.9842220185364398
+        "weight": 0.13991303097050656
       },
       {
         "source": "MSFT",
         "target": "GOOGL",
-        "weight": 0.33464685086736967
+        "weight": 0.3165200454989795
       },
       {
         "source": "MSFT",
         "target": "AMZN",
-        "weight": 0.7778412193817277
+        "weight": 0.8994108423960628
       },
       {
         "source": "MSFT",
         "target": "TSLA",
-        "weight": 0.5585332567318335
+        "weight": 0.6586925304281972
       },
       {
         "source": "GOOGL",
         "target": "AMZN",
-        "weight": 0.14293836732966336
+        "weight": 0.7220207319510477
       },
       {
         "source": "GOOGL",
         "target": "TSLA",
-        "weight": 0.4355394799639969
+        "weight": 0.6446654156176187
       },
       {
         "source": "GOOGL",
         "target": "META",
-        "weight": 0.13970777074481067
+        "weight": 0.18370400706887247
       },
       {
         "source": "AMZN",
         "target": "TSLA",
-        "weight": 0.12229535253754753
+        "weight": 0.18716424674882015
       },
       {
         "source": "AMZN",
         "target": "META",
-        "weight": 0.40019247676031555
+        "weight": 0.8784214017964513
       },
       {
         "source": "AMZN",
         "target": "NVDA",
-        "weight": 0.6701379180602548
+        "weight": 0.043026218902212254
       },
       {
         "source": "TSLA",
         "target": "META",
-        "weight": 0.9051824924202362
+        "weight": 0.9669001409512648
       },
       {
         "source": "TSLA",
         "target": "NVDA",
-        "weight": 0.6592600100761958
+        "weight": 0.30525319088341873
       },
       {
         "source": "TSLA",
         "target": "NFLX",
-        "weight": 0.3452792301818869
+        "weight": 0.8093817542598296
       },
       {
         "source": "META",
         "target": "NVDA",
-        "weight": 0.43036557389433383
+        "weight": 0.03493836063262956
       },
       {
         "source": "META",
         "target": "NFLX",
-        "weight": 0.19507304743436638
+        "weight": 0.41536088414008143
       },
       {
         "source": "META",
         "target": "BAC",
-        "weight": 0.521148136191025
+        "weight": 0.02414929247891362
       },
       {
         "source": "NVDA",
         "target": "NFLX",
-        "weight": 0.8055300180894862
+        "weight": 0.017237746300514223
       },
       {
         "source": "NVDA",
         "target": "BAC",
-        "weight": 0.388461875973393
+        "weight": 0.6101258966947717
       },
       {
         "source": "NVDA",
         "target": "JPM",
-        "weight": 0.11842160766966459
+        "weight": 0.694702020449196
       },
       {
         "source": "NFLX",
         "target": "BAC",
-        "weight": 0.9746151274459711
+        "weight": 0.18573544918969398
       },
       {
         "source": "NFLX",
         "target": "JPM",
-        "weight": 0.6579424437051686
+        "weight": 0.5496877253573778
       },
       {
         "source": "BAC",
         "target": "JPM",
-        "weight": 0.9162703144290859
+        "weight": 0.21535333182677885
       }
     ]
   },
@@ -1308,200 +1308,200 @@
       {
         "id": "AAPL",
         "name": "AAPL Inc.",
-        "degree": 8,
-        "market_cap": 462191,
+        "degree": 6,
+        "market_cap": 491788,
         "top_connections": [
           {
             "ticker": "MSFT",
-            "weight": 0.8606343319621937
+            "weight": 0.2081339815988782
           },
           {
             "ticker": "GOOGL",
-            "weight": 0.7374586269479183
+            "weight": 0.3143247040411291
           },
           {
             "ticker": "AMZN",
-            "weight": 0.8780770912277868
+            "weight": 0.2697857190184164
           }
         ]
       },
       {
         "id": "MSFT",
         "name": "MSFT Inc.",
-        "degree": 9,
-        "market_cap": 394478,
+        "degree": 5,
+        "market_cap": 214990,
         "top_connections": [
           {
             "ticker": "GOOGL",
-            "weight": 0.8622660393653111
+            "weight": 0.7217064896175641
           },
           {
             "ticker": "AMZN",
-            "weight": 0.12359130051786704
+            "weight": 0.5533732980877741
           },
           {
             "ticker": "TSLA",
-            "weight": 0.7436650553296689
+            "weight": 0.4603216822940901
           }
         ]
       },
       {
         "id": "GOOGL",
         "name": "GOOGL Inc.",
-        "degree": 5,
-        "market_cap": 498542,
+        "degree": 6,
+        "market_cap": 306970,
         "top_connections": [
           {
             "ticker": "AMZN",
-            "weight": 0.8508172329035287
+            "weight": 0.3361051454818387
           },
           {
             "ticker": "TSLA",
-            "weight": 0.15832377060588576
+            "weight": 0.679154867826246
           },
           {
             "ticker": "META",
-            "weight": 0.19787678271156184
+            "weight": 0.07619192112348927
           }
         ]
       },
       {
         "id": "AMZN",
         "name": "AMZN Inc.",
-        "degree": 22,
-        "market_cap": 166461,
+        "degree": 8,
+        "market_cap": 160992,
         "top_connections": [
           {
             "ticker": "TSLA",
-            "weight": 0.2452493622508104
+            "weight": 0.05743681575613324
           },
           {
             "ticker": "META",
-            "weight": 0.9544561679700765
+            "weight": 0.3623021201189991
           },
           {
             "ticker": "NVDA",
-            "weight": 0.33387113472076624
+            "weight": 0.46696685855476117
           }
         ]
       },
       {
         "id": "TSLA",
         "name": "TSLA Inc.",
-        "degree": 10,
-        "market_cap": 126479,
+        "degree": 13,
+        "market_cap": 225533,
         "top_connections": [
           {
             "ticker": "META",
-            "weight": 0.701795415773101
+            "weight": 0.6082721487833228
           },
           {
             "ticker": "NVDA",
-            "weight": 0.5055063973890277
+            "weight": 0.44339942117413045
           },
           {
             "ticker": "NFLX",
-            "weight": 0.03880248239869388
+            "weight": 0.11579872743003417
           }
         ]
       },
       {
         "id": "META",
         "name": "META Inc.",
-        "degree": 10,
-        "market_cap": 367163,
+        "degree": 7,
+        "market_cap": 326150,
         "top_connections": [
           {
             "ticker": "NVDA",
-            "weight": 0.8170806386114585
+            "weight": 0.23527572003017028
           },
           {
             "ticker": "NFLX",
-            "weight": 0.795968404098813
+            "weight": 0.9360336855147938
           },
           {
             "ticker": "BAC",
-            "weight": 0.6171964476894847
+            "weight": 0.5333181964117887
           }
         ]
       },
       {
         "id": "NVDA",
         "name": "NVDA Inc.",
-        "degree": 19,
-        "market_cap": 382860,
+        "degree": 8,
+        "market_cap": 119930,
         "top_connections": [
           {
             "ticker": "NFLX",
-            "weight": 0.4017629485097085
+            "weight": 0.5038431381319725
           },
           {
             "ticker": "BAC",
-            "weight": 0.38697474466461135
+            "weight": 0.3332997869180454
           },
           {
             "ticker": "JPM",
-            "weight": 0.8892760929013229
+            "weight": 0.18441359846783067
           }
         ]
       },
       {
         "id": "NFLX",
         "name": "NFLX Inc.",
-        "degree": 17,
-        "market_cap": 126325,
+        "degree": 22,
+        "market_cap": 352236,
         "top_connections": [
           {
             "ticker": "BAC",
-            "weight": 0.09638675035614963
+            "weight": 0.028252265570823387
           },
           {
             "ticker": "JPM",
-            "weight": 0.25920743041433936
+            "weight": 0.8306500503337553
           },
           {
             "ticker": "AAPL",
-            "weight": 0.8598310382387769
+            "weight": 0.014466170552190682
           }
         ]
       },
       {
         "id": "BAC",
         "name": "BAC Inc.",
-        "degree": 5,
-        "market_cap": 69005,
+        "degree": 24,
+        "market_cap": 56368,
         "top_connections": [
           {
             "ticker": "JPM",
-            "weight": 0.6752785517095243
+            "weight": 0.8138814106149789
           },
           {
             "ticker": "AAPL",
-            "weight": 0.7568954353283657
+            "weight": 0.5604935435374188
           },
           {
             "ticker": "MSFT",
-            "weight": 0.590074238388512
+            "weight": 0.8603924386395813
           }
         ]
       },
       {
         "id": "JPM",
         "name": "JPM Inc.",
-        "degree": 6,
-        "market_cap": 77054,
+        "degree": 10,
+        "market_cap": 210804,
         "top_connections": [
           {
             "ticker": "AAPL",
-            "weight": 0.25519155107256786
+            "weight": 0.6821640551426901
           },
           {
             "ticker": "MSFT",
-            "weight": 0.5249237916334258
+            "weight": 0.005399914291510877
           },
           {
             "ticker": "GOOGL",
-            "weight": 0.7243244230261384
+            "weight": 0.6061967900740476
           }
         ]
       }
@@ -1510,122 +1510,122 @@
       {
         "source": "AAPL",
         "target": "MSFT",
-        "weight": 0.6718608847654606
+        "weight": 0.8820752333824031
       },
       {
         "source": "AAPL",
         "target": "GOOGL",
-        "weight": 0.039823395117174254
+        "weight": 0.5514730436826394
       },
       {
         "source": "AAPL",
         "target": "AMZN",
-        "weight": 0.5833515815346191
+        "weight": 0.19787551741521558
       },
       {
         "source": "MSFT",
         "target": "GOOGL",
-        "weight": 0.4171365655343079
+        "weight": 0.013911307432020958
       },
       {
         "source": "MSFT",
         "target": "AMZN",
-        "weight": 0.24913681526148568
+        "weight": 0.5059281265728651
       },
       {
         "source": "MSFT",
         "target": "TSLA",
-        "weight": 0.7508699241111128
+        "weight": 0.6538854255237116
       },
       {
         "source": "GOOGL",
         "target": "AMZN",
-        "weight": 0.014794772806037693
+        "weight": 0.8759494327559868
       },
       {
         "source": "GOOGL",
         "target": "TSLA",
-        "weight": 0.03735107737305898
+        "weight": 0.7363443243950163
       },
       {
         "source": "GOOGL",
         "target": "META",
-        "weight": 0.9365726229786696
+        "weight": 0.633717000649566
       },
       {
         "source": "AMZN",
         "target": "TSLA",
-        "weight": 0.597435820689312
+        "weight": 0.4814295353977778
       },
       {
         "source": "AMZN",
         "target": "META",
-        "weight": 0.29308782119974464
+        "weight": 0.6029931027917812
       },
       {
         "source": "AMZN",
         "target": "NVDA",
-        "weight": 0.6083656983539659
+        "weight": 0.48516870829326075
       },
       {
         "source": "TSLA",
         "target": "META",
-        "weight": 0.7553304165542585
+        "weight": 0.34343258927029663
       },
       {
         "source": "TSLA",
         "target": "NVDA",
-        "weight": 0.022376376444893986
+        "weight": 0.2503519808980539
       },
       {
         "source": "TSLA",
         "target": "NFLX",
-        "weight": 0.6699859027610456
+        "weight": 0.09074776107156302
       },
       {
         "source": "META",
         "target": "NVDA",
-        "weight": 0.27799549860401795
+        "weight": 0.7874440911929199
       },
       {
         "source": "META",
         "target": "NFLX",
-        "weight": 0.0142191095342874
+        "weight": 0.6344709502890588
       },
       {
         "source": "META",
         "target": "BAC",
-        "weight": 0.133336291857713
+        "weight": 0.3786059784427054
       },
       {
         "source": "NVDA",
         "target": "NFLX",
-        "weight": 0.8653075937393431
+        "weight": 0.002924147483036932
       },
       {
         "source": "NVDA",
         "target": "BAC",
-        "weight": 0.5986366933874627
+        "weight": 0.23225251114200618
       },
       {
         "source": "NVDA",
         "target": "JPM",
-        "weight": 0.061501730947527866
+        "weight": 0.11914550736800689
       },
       {
         "source": "NFLX",
         "target": "BAC",
-        "weight": 0.035239450453961596
+        "weight": 0.4425251298376648
       },
       {
         "source": "NFLX",
         "target": "JPM",
-        "weight": 0.567950357223366
+        "weight": 0.5562866100386896
       },
       {
         "source": "BAC",
         "target": "JPM",
-        "weight": 0.2015930204228492
+        "weight": 0.9346921541872184
       }
     ]
   },
@@ -1634,60 +1634,60 @@
       {
         "id": "AAPL",
         "name": "AAPL Inc.",
-        "degree": 21,
-        "market_cap": 222591,
+        "degree": 14,
+        "market_cap": 494811,
         "top_connections": [
           {
             "ticker": "MSFT",
-            "weight": 0.9578402668667549
+            "weight": 0.7261022022980174
           },
           {
             "ticker": "GOOGL",
-            "weight": 0.41305300962521596
+            "weight": 0.32692080604703566
           },
           {
             "ticker": "AMZN",
-            "weight": 0.8029323937943574
+            "weight": 0.5679271114960821
           }
         ]
       },
       {
         "id": "MSFT",
         "name": "MSFT Inc.",
-        "degree": 5,
-        "market_cap": 284600,
+        "degree": 9,
+        "market_cap": 374695,
         "top_connections": [
           {
             "ticker": "GOOGL",
-            "weight": 0.4365688284488023
+            "weight": 0.15648510786138803
           },
           {
             "ticker": "AMZN",
-            "weight": 0.08781151578961632
+            "weight": 0.893143939855684
           },
           {
             "ticker": "TSLA",
-            "weight": 0.9973173224985676
+            "weight": 0.1824018366095821
           }
         ]
       },
       {
         "id": "GOOGL",
         "name": "GOOGL Inc.",
-        "degree": 5,
-        "market_cap": 374942,
+        "degree": 7,
+        "market_cap": 463400,
         "top_connections": [
           {
             "ticker": "AMZN",
-            "weight": 0.3852477456344672
+            "weight": 0.12336021128329644
           },
           {
             "ticker": "TSLA",
-            "weight": 0.40146141754642295
+            "weight": 0.5188761261421523
           },
           {
             "ticker": "META",
-            "weight": 0.349290858253534
+            "weight": 0.5581782452926328
           }
         ]
       },
@@ -1695,139 +1695,139 @@
         "id": "AMZN",
         "name": "AMZN Inc.",
         "degree": 21,
-        "market_cap": 308326,
+        "market_cap": 56123,
         "top_connections": [
           {
             "ticker": "TSLA",
-            "weight": 0.46115404182056496
+            "weight": 0.511375524433964
           },
           {
             "ticker": "META",
-            "weight": 0.5656611339056834
+            "weight": 0.6997317770255201
           },
           {
             "ticker": "NVDA",
-            "weight": 0.08132650952454701
+            "weight": 0.2568778080248447
           }
         ]
       },
       {
         "id": "TSLA",
         "name": "TSLA Inc.",
-        "degree": 12,
-        "market_cap": 315751,
+        "degree": 14,
+        "market_cap": 433094,
         "top_connections": [
           {
             "ticker": "META",
-            "weight": 0.7943882803219093
+            "weight": 0.30958651482950006
           },
           {
             "ticker": "NVDA",
-            "weight": 0.9641210103564708
+            "weight": 0.3468964695964497
           },
           {
             "ticker": "NFLX",
-            "weight": 0.7226729723572738
+            "weight": 0.8255663902252909
           }
         ]
       },
       {
         "id": "META",
         "name": "META Inc.",
-        "degree": 22,
-        "market_cap": 307609,
+        "degree": 20,
+        "market_cap": 210596,
         "top_connections": [
           {
             "ticker": "NVDA",
-            "weight": 0.28520884739906127
+            "weight": 0.9844821144078265
           },
           {
             "ticker": "NFLX",
-            "weight": 0.3320361614561038
+            "weight": 0.06001736426330162
           },
           {
             "ticker": "BAC",
-            "weight": 0.7581520469252178
+            "weight": 0.3996962657104237
           }
         ]
       },
       {
         "id": "NVDA",
         "name": "NVDA Inc.",
-        "degree": 19,
-        "market_cap": 103381,
+        "degree": 18,
+        "market_cap": 112565,
         "top_connections": [
           {
             "ticker": "NFLX",
-            "weight": 0.6555120262517186
+            "weight": 0.6668361604083829
           },
           {
             "ticker": "BAC",
-            "weight": 0.9752544443816146
+            "weight": 0.47773954380390904
           },
           {
             "ticker": "JPM",
-            "weight": 0.901270934407543
+            "weight": 0.2065025120124866
           }
         ]
       },
       {
         "id": "NFLX",
         "name": "NFLX Inc.",
-        "degree": 7,
-        "market_cap": 271602,
+        "degree": 24,
+        "market_cap": 429044,
         "top_connections": [
           {
             "ticker": "BAC",
-            "weight": 0.5464423729020161
+            "weight": 0.036074766849170326
           },
           {
             "ticker": "JPM",
-            "weight": 0.1349864014559511
+            "weight": 0.6249354104247077
           },
           {
             "ticker": "AAPL",
-            "weight": 0.75009534432734
+            "weight": 0.021051291416594453
           }
         ]
       },
       {
         "id": "BAC",
         "name": "BAC Inc.",
-        "degree": 11,
-        "market_cap": 192468,
+        "degree": 5,
+        "market_cap": 221205,
         "top_connections": [
           {
             "ticker": "JPM",
-            "weight": 0.6655978838844344
+            "weight": 0.45375997310811456
           },
           {
             "ticker": "AAPL",
-            "weight": 0.46322701022521895
+            "weight": 0.30845566033525984
           },
           {
             "ticker": "MSFT",
-            "weight": 0.06647444266507874
+            "weight": 0.40000067752528934
           }
         ]
       },
       {
         "id": "JPM",
         "name": "JPM Inc.",
-        "degree": 16,
-        "market_cap": 269075,
+        "degree": 8,
+        "market_cap": 57217,
         "top_connections": [
           {
             "ticker": "AAPL",
-            "weight": 0.5575292914556043
+            "weight": 0.3426557450647514
           },
           {
             "ticker": "MSFT",
-            "weight": 0.9691689271034034
+            "weight": 0.30608309804579836
           },
           {
             "ticker": "GOOGL",
-            "weight": 0.13935333963998686
+            "weight": 0.7472885304761451
           }
         ]
       }
@@ -1836,122 +1836,122 @@
       {
         "source": "AAPL",
         "target": "MSFT",
-        "weight": 0.9773653364199754
+        "weight": 0.36602845781617643
       },
       {
         "source": "AAPL",
         "target": "GOOGL",
-        "weight": 0.6000054476185678
+        "weight": 0.9274682661556689
       },
       {
         "source": "AAPL",
         "target": "AMZN",
-        "weight": 0.9152090337319673
+        "weight": 0.33354993848720005
       },
       {
         "source": "MSFT",
         "target": "GOOGL",
-        "weight": 0.9164148675723656
+        "weight": 0.6674207147276777
       },
       {
         "source": "MSFT",
         "target": "AMZN",
-        "weight": 0.2842227135511658
+        "weight": 0.47891112723975404
       },
       {
         "source": "MSFT",
         "target": "TSLA",
-        "weight": 0.24160802678260218
+        "weight": 0.9043475132119017
       },
       {
         "source": "GOOGL",
         "target": "AMZN",
-        "weight": 0.8540978415588786
+        "weight": 0.33856281699939217
       },
       {
         "source": "GOOGL",
         "target": "TSLA",
-        "weight": 0.525338558119476
+        "weight": 0.29970484755282156
       },
       {
         "source": "GOOGL",
         "target": "META",
-        "weight": 0.07435843323915414
+        "weight": 0.726098730628239
       },
       {
         "source": "AMZN",
         "target": "TSLA",
-        "weight": 0.47697042768021025
+        "weight": 0.7117228067671783
       },
       {
         "source": "AMZN",
         "target": "META",
-        "weight": 0.05185801102352272
+        "weight": 0.49243722666375955
       },
       {
         "source": "AMZN",
         "target": "NVDA",
-        "weight": 0.5262281011295669
+        "weight": 0.49264007819249545
       },
       {
         "source": "TSLA",
         "target": "META",
-        "weight": 0.5750134623870051
+        "weight": 0.8794796477105602
       },
       {
         "source": "TSLA",
         "target": "NVDA",
-        "weight": 0.4662198479558698
+        "weight": 0.9824632563197124
       },
       {
         "source": "TSLA",
         "target": "NFLX",
-        "weight": 0.9064839614362875
+        "weight": 0.2543494884712769
       },
       {
         "source": "META",
         "target": "NVDA",
-        "weight": 0.40833770601673414
+        "weight": 0.7165864850157782
       },
       {
         "source": "META",
         "target": "NFLX",
-        "weight": 0.25835057017947016
+        "weight": 0.8159686538877973
       },
       {
         "source": "META",
         "target": "BAC",
-        "weight": 0.19169836517454453
+        "weight": 0.6216558584103664
       },
       {
         "source": "NVDA",
         "target": "NFLX",
-        "weight": 0.5051777540220957
+        "weight": 0.2628071558003069
       },
       {
         "source": "NVDA",
         "target": "BAC",
-        "weight": 0.4073506314581836
+        "weight": 0.3299804930452962
       },
       {
         "source": "NVDA",
         "target": "JPM",
-        "weight": 0.39652196378625915
+        "weight": 0.4090333670921247
       },
       {
         "source": "NFLX",
         "target": "BAC",
-        "weight": 0.663042863797782
+        "weight": 0.33250550653616706
       },
       {
         "source": "NFLX",
         "target": "JPM",
-        "weight": 0.738018675590876
+        "weight": 0.020651157092657413
       },
       {
         "source": "BAC",
         "target": "JPM",
-        "weight": 0.28203775599534797
+        "weight": 0.6256853423404194
       }
     ]
   },
@@ -1960,200 +1960,200 @@
       {
         "id": "AAPL",
         "name": "AAPL Inc.",
-        "degree": 9,
-        "market_cap": 165646,
+        "degree": 5,
+        "market_cap": 409212,
         "top_connections": [
           {
             "ticker": "MSFT",
-            "weight": 0.9892328168992676
+            "weight": 0.6419075408818431
           },
           {
             "ticker": "GOOGL",
-            "weight": 0.8225444272615325
+            "weight": 0.16415426873515426
           },
           {
             "ticker": "AMZN",
-            "weight": 0.1875662052203464
+            "weight": 0.04491759231023773
           }
         ]
       },
       {
         "id": "MSFT",
         "name": "MSFT Inc.",
-        "degree": 5,
-        "market_cap": 371100,
+        "degree": 16,
+        "market_cap": 90637,
         "top_connections": [
           {
             "ticker": "GOOGL",
-            "weight": 0.5805447899838374
+            "weight": 0.4561685152873006
           },
           {
             "ticker": "AMZN",
-            "weight": 0.005936820222480432
+            "weight": 0.336985973791874
           },
           {
             "ticker": "TSLA",
-            "weight": 0.9555666530782161
+            "weight": 0.9376231347362901
           }
         ]
       },
       {
         "id": "GOOGL",
         "name": "GOOGL Inc.",
-        "degree": 16,
-        "market_cap": 202295,
+        "degree": 19,
+        "market_cap": 383307,
         "top_connections": [
           {
             "ticker": "AMZN",
-            "weight": 0.2228214935020928
+            "weight": 0.6332782814540642
           },
           {
             "ticker": "TSLA",
-            "weight": 0.4575818376209484
+            "weight": 0.38409103513877385
           },
           {
             "ticker": "META",
-            "weight": 0.58720362110129
+            "weight": 0.8314276507304063
           }
         ]
       },
       {
         "id": "AMZN",
         "name": "AMZN Inc.",
-        "degree": 23,
-        "market_cap": 141451,
+        "degree": 10,
+        "market_cap": 450005,
         "top_connections": [
           {
             "ticker": "TSLA",
-            "weight": 0.48672074222326556
+            "weight": 0.1658239747547301
           },
           {
             "ticker": "META",
-            "weight": 0.9747325079200189
+            "weight": 0.5982136607061247
           },
           {
             "ticker": "NVDA",
-            "weight": 0.04194610870014026
+            "weight": 0.4292003879673555
           }
         ]
       },
       {
         "id": "TSLA",
         "name": "TSLA Inc.",
-        "degree": 16,
-        "market_cap": 141218,
+        "degree": 23,
+        "market_cap": 488784,
         "top_connections": [
           {
             "ticker": "META",
-            "weight": 0.33548789671942314
+            "weight": 0.13083158374722637
           },
           {
             "ticker": "NVDA",
-            "weight": 0.013463733171546699
+            "weight": 0.55809516864949
           },
           {
             "ticker": "NFLX",
-            "weight": 0.006686962781590977
+            "weight": 0.6454718166988919
           }
         ]
       },
       {
         "id": "META",
         "name": "META Inc.",
-        "degree": 18,
-        "market_cap": 348573,
+        "degree": 15,
+        "market_cap": 355028,
         "top_connections": [
           {
             "ticker": "NVDA",
-            "weight": 0.5796479621498415
+            "weight": 0.7777759400161587
           },
           {
             "ticker": "NFLX",
-            "weight": 0.29651063064486416
+            "weight": 0.2762171341646563
           },
           {
             "ticker": "BAC",
-            "weight": 0.7864580195312864
+            "weight": 0.25142346994410913
           }
         ]
       },
       {
         "id": "NVDA",
         "name": "NVDA Inc.",
-        "degree": 21,
-        "market_cap": 437528,
+        "degree": 6,
+        "market_cap": 236992,
         "top_connections": [
           {
             "ticker": "NFLX",
-            "weight": 0.8423656538071925
+            "weight": 0.6208833081685282
           },
           {
             "ticker": "BAC",
-            "weight": 0.29895659033053756
+            "weight": 0.8132892934381735
           },
           {
             "ticker": "JPM",
-            "weight": 0.08039139514729154
+            "weight": 0.5664933424201688
           }
         ]
       },
       {
         "id": "NFLX",
         "name": "NFLX Inc.",
-        "degree": 16,
-        "market_cap": 76551,
+        "degree": 12,
+        "market_cap": 441500,
         "top_connections": [
           {
             "ticker": "BAC",
-            "weight": 0.8364635278956108
+            "weight": 0.42652711546863686
           },
           {
             "ticker": "JPM",
-            "weight": 0.17809004157209618
+            "weight": 0.4550357099953457
           },
           {
             "ticker": "AAPL",
-            "weight": 0.3448189690693989
+            "weight": 0.1196918896246334
           }
         ]
       },
       {
         "id": "BAC",
         "name": "BAC Inc.",
-        "degree": 12,
-        "market_cap": 490354,
+        "degree": 11,
+        "market_cap": 452087,
         "top_connections": [
           {
             "ticker": "JPM",
-            "weight": 0.8020958467374134
+            "weight": 0.10726529561184861
           },
           {
             "ticker": "AAPL",
-            "weight": 0.7992080455516694
+            "weight": 0.5059166401428734
           },
           {
             "ticker": "MSFT",
-            "weight": 0.1799783607297466
+            "weight": 0.6450719845415881
           }
         ]
       },
       {
         "id": "JPM",
         "name": "JPM Inc.",
-        "degree": 13,
-        "market_cap": 259069,
+        "degree": 23,
+        "market_cap": 73629,
         "top_connections": [
           {
             "ticker": "AAPL",
-            "weight": 0.30400764896711785
+            "weight": 0.9582804674553229
           },
           {
             "ticker": "MSFT",
-            "weight": 0.15834405388868145
+            "weight": 0.27948460867905034
           },
           {
             "ticker": "GOOGL",
-            "weight": 0.3635217951183458
+            "weight": 0.8655695344649016
           }
         ]
       }
@@ -2162,122 +2162,122 @@
       {
         "source": "AAPL",
         "target": "MSFT",
-        "weight": 0.3906888225019045
+        "weight": 0.08833406520554454
       },
       {
         "source": "AAPL",
         "target": "GOOGL",
-        "weight": 0.6055485099559667
+        "weight": 0.3764691710609366
       },
       {
         "source": "AAPL",
         "target": "AMZN",
-        "weight": 0.48691734649203955
+        "weight": 0.6788968810278991
       },
       {
         "source": "MSFT",
         "target": "GOOGL",
-        "weight": 0.77808061804985
+        "weight": 0.08042807909582961
       },
       {
         "source": "MSFT",
         "target": "AMZN",
-        "weight": 0.33171768104774246
+        "weight": 0.6216211971235536
       },
       {
         "source": "MSFT",
         "target": "TSLA",
-        "weight": 0.33369614130687053
+        "weight": 0.6747566523795953
       },
       {
         "source": "GOOGL",
         "target": "AMZN",
-        "weight": 0.7190689930723582
+        "weight": 0.1749489548449935
       },
       {
         "source": "GOOGL",
         "target": "TSLA",
-        "weight": 0.15757586801062862
+        "weight": 0.7269972051265102
       },
       {
         "source": "GOOGL",
         "target": "META",
-        "weight": 0.9653996842849577
+        "weight": 0.927271704907111
       },
       {
         "source": "AMZN",
         "target": "TSLA",
-        "weight": 0.7789340532311781
+        "weight": 0.0924296415506235
       },
       {
         "source": "AMZN",
         "target": "META",
-        "weight": 0.9105916139889546
+        "weight": 0.24803169496320576
       },
       {
         "source": "AMZN",
         "target": "NVDA",
-        "weight": 0.16176620932024643
+        "weight": 0.21022304036758366
       },
       {
         "source": "TSLA",
         "target": "META",
-        "weight": 0.637793386959816
+        "weight": 0.609147013002919
       },
       {
         "source": "TSLA",
         "target": "NVDA",
-        "weight": 0.7728414578645293
+        "weight": 0.8068170445241329
       },
       {
         "source": "TSLA",
         "target": "NFLX",
-        "weight": 0.4826529012494023
+        "weight": 0.3158707713490515
       },
       {
         "source": "META",
         "target": "NVDA",
-        "weight": 0.9424606170396415
+        "weight": 0.32727243246596305
       },
       {
         "source": "META",
         "target": "NFLX",
-        "weight": 0.3676597949677459
+        "weight": 0.7417810186938748
       },
       {
         "source": "META",
         "target": "BAC",
-        "weight": 0.5260661691114195
+        "weight": 0.21844545584955488
       },
       {
         "source": "NVDA",
         "target": "NFLX",
-        "weight": 0.9143735753662208
+        "weight": 0.7149905173985404
       },
       {
         "source": "NVDA",
         "target": "BAC",
-        "weight": 0.9507172432036893
+        "weight": 0.7346585732788372
       },
       {
         "source": "NVDA",
         "target": "JPM",
-        "weight": 0.6021710875467319
+        "weight": 0.5727544133069361
       },
       {
         "source": "NFLX",
         "target": "BAC",
-        "weight": 0.9913645121337183
+        "weight": 0.6118163519939074
       },
       {
         "source": "NFLX",
         "target": "JPM",
-        "weight": 0.9325484608851519
+        "weight": 0.7601737332560482
       },
       {
         "source": "BAC",
         "target": "JPM",
-        "weight": 0.8854585828314088
+        "weight": 0.28092324079523534
       }
     ]
   }
