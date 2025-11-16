@@ -380,6 +380,342 @@ class Experimental_platform:
         g.add_weighted_edges_from(edge_bunch)
         self.top_degree_nodes(g)
         return g
+    
+    def extract_largest_connected_component(self, g):
+        """
+        Extract the largest connected component from a graph
+        
+        Args:
+            g: NetworkX graph
+            
+        Returns:
+            NetworkX graph containing only the largest connected component
+        """
+        if g.number_of_nodes() == 0:
+            print("⚠️  Warning: Empty graph")
+            return nx.Graph()
+        
+        # Get all connected components
+        components = list(nx.connected_components(g))
+        
+        if not components:
+            print("⚠️  Warning: No connected components found")
+            return nx.Graph()
+        
+        # Sort by size (largest first)
+        components = sorted(components, key=len, reverse=True)
+        largest_component = components[0]
+        
+        # Extract subgraph
+        largest_cc = g.subgraph(largest_component).copy()
+        
+        print(f"📊 Connected Component Analysis:")
+        print(f"   Total components: {len(components)}")
+        print(f"   Largest component size: {len(largest_component)} nodes")
+        print(f"   Largest component edges: {largest_cc.number_of_edges()}")
+        print(f"   Coverage: {len(largest_component)/g.number_of_nodes()*100:.1f}% of total nodes")
+        
+        return largest_cc
+    
+    def visualize_network(self, g, year, method, save_dir='network_figures'):
+        """
+        Visualize and save network with highlighted high-degree nodes
+        
+        Args:
+            g: NetworkX graph
+            year: Year of the network
+            method: Method used (DNL, PCC)
+            save_dir: Directory to save figures
+        """
+        os.makedirs(save_dir, exist_ok=True)
+        
+        if g.number_of_nodes() == 0:
+            print(f"⚠️  Skipping visualization for {year} ({method}) - empty graph")
+            return
+        
+        plt.figure(figsize=(15, 12))
+        
+        # Use spring layout for better visualization
+        pos = nx.spring_layout(g, k=2, iterations=50, seed=42)
+        
+        # Calculate node sizes based on degree
+        degrees = dict(g.degree())
+        node_sizes = [300 + degrees[node] * 50 for node in g.nodes()]
+        
+        # Identify top nodes by degree (for highlighting)
+        top_nodes = sorted(degrees.items(), key=lambda x: x[1], reverse=True)[:5]
+        top_node_names = [node[0] for node in top_nodes]
+        
+        # Node colors: highlight top nodes
+        node_colors = ['#FFA500' if node in top_node_names else '#3498db' 
+                      for node in g.nodes()]
+        
+        # Draw network
+        nx.draw_networkx_edges(g, pos, alpha=0.2, width=0.5, edge_color='gray')
+        nx.draw_networkx_nodes(g, pos, node_size=node_sizes, 
+                              node_color=node_colors, alpha=0.8)
+        
+        # Draw labels only for top nodes
+        labels = {node: node for node in top_node_names}
+        nx.draw_networkx_labels(g, pos, labels, font_size=12, 
+                               font_weight='bold', font_color='black',
+                               bbox=dict(boxstyle='round,pad=0.5', 
+                                       facecolor='yellow', alpha=0.8))
+        
+        plt.title(f'{year} ({method}) - Largest Connected Component\n'
+                 f'Nodes: {g.number_of_nodes()}, Edges: {g.number_of_edges()}',
+                 fontsize=16, fontweight='bold')
+        plt.axis('off')
+        plt.tight_layout()
+        
+        # Save figure
+        filename = f'{save_dir}/{year}_{method}_network.png'
+        plt.savefig(filename, dpi=300, bbox_inches='tight')
+        plt.close()
+        
+        print(f"✅ Saved visualization: {filename}")
+        
+        # Print top nodes
+        print(f"\n[Top 5 nodes in {year} ({method})]")
+        for i, (node, degree) in enumerate(top_nodes[:5], 1):
+            print(f"  {i}. {node}: degree={degree}")
+    
+    def evolving_coinvestment_patterns(self, start_year=2010, end_year=2016, 
+                                      rare_ratio=0.001, compare_with_pcc=True):
+        """
+        Discover evolving co-investment patterns over multiple years
+        Reproduces Figure 5 from the paper
+        
+        Args:
+            start_year: Starting year for analysis
+            end_year: Ending year for analysis
+            rare_ratio: Edge density parameter (γ in paper, default 0.001)
+            compare_with_pcc: Whether to include PCC comparison
+        """
+        print("=" * 70)
+        print("EVOLVING CO-INVESTMENT PATTERN DISCOVERY")
+        print("=" * 70)
+        print(f"Analysis period: {start_year} - {end_year}")
+        print(f"Rare ratio (γ): {rare_ratio}")
+        print(f"Compare with PCC: {compare_with_pcc}")
+        print("=" * 70 + "\n")
+        
+        # Store results for analysis
+        results = {
+            'DNL': {},
+            'PCC': {}
+        }
+        
+        for year in range(start_year, end_year + 1):
+            seed = year - 2010  # Convert to seed (0-indexed from 2010)
+            
+            print(f"\n{'='*70}")
+            print(f"Processing Year: {year} (seed={seed})")
+            print(f"{'='*70}")
+            
+            # Generate periods
+            train_period, test_period = self.period_generator(seed)
+            
+            try:
+                # Load data
+                print(f"📥 Loading data for {train_period[0]} to {train_period[1]}")
+                train_x = self.datatool.load_x(train_period)
+                train_y = self.datatool.load_y(train_period)
+                
+                if len(train_y) < 10:
+                    print(f"⚠️  Skipping {year} - insufficient data")
+                    continue
+                
+                # ===== DEEPCNL NETWORK =====
+                print(f"\n🔬 Learning DNL network for {year}...")
+                g_dnl = self.deep_CNL('igo', train_x, train_y, rare_ratio)
+                
+                # Extract largest connected component
+                print(f"\n📊 Extracting largest connected component (DNL)...")
+                lcc_dnl = self.extract_largest_connected_component(g_dnl)
+                
+                # Visualize
+                self.visualize_network(lcc_dnl, year, 'DNL')
+                
+                # Store results
+                results['DNL'][year] = {
+                    'full_graph': g_dnl,
+                    'largest_component': lcc_dnl,
+                    'nodes': lcc_dnl.number_of_nodes(),
+                    'edges': lcc_dnl.number_of_edges(),
+                    'density': nx.density(lcc_dnl) if lcc_dnl.number_of_nodes() > 0 else 0
+                }
+                
+                # ===== PCC BASELINE (if requested) =====
+                if compare_with_pcc:
+                    print(f"\n🔬 Learning PCC network for {year}...")
+                    g_pcc = self.Pearson_cor(rare_ratio)
+                    
+                    print(f"\n📊 Extracting largest connected component (PCC)...")
+                    lcc_pcc = self.extract_largest_connected_component(g_pcc)
+                    
+                    # Visualize
+                    self.visualize_network(lcc_pcc, year, 'PCC')
+                    
+                    # Store results
+                    results['PCC'][year] = {
+                        'full_graph': g_pcc,
+                        'largest_component': lcc_pcc,
+                        'nodes': lcc_pcc.number_of_nodes(),
+                        'edges': lcc_pcc.number_of_edges(),
+                        'density': nx.density(lcc_pcc) if lcc_pcc.number_of_nodes() > 0 else 0
+                    }
+                
+            except Exception as e:
+                print(f"\n❌ Error processing {year}: {e}")
+                import traceback
+                traceback.print_exc()
+                continue
+        
+        # ===== SUMMARY ANALYSIS =====
+        self._print_evolution_summary(results, start_year, end_year)
+        
+        return results
+    
+    def _print_evolution_summary(self, results, start_year, end_year):
+        """Print summary of network evolution"""
+        print("\n" + "=" * 70)
+        print("EVOLUTION SUMMARY")
+        print("=" * 70)
+        
+        print("\n📊 DNL Network Evolution:")
+        print(f"{'Year':<8} {'Nodes':<10} {'Edges':<10} {'Density':<12} {'Top Nodes'}")
+        print("-" * 70)
+        
+        for year in range(start_year, end_year + 1):
+            if year in results['DNL']:
+                data = results['DNL'][year]
+                lcc = data['largest_component']
+                if lcc.number_of_nodes() > 0:
+                    top_nodes = sorted(lcc.degree, key=lambda x: x[1], reverse=True)[:3]
+                    top_str = ', '.join([f"{n}({d})" for n, d in top_nodes])
+                else:
+                    top_str = "N/A"
+                
+                print(f"{year:<8} {data['nodes']:<10} {data['edges']:<10} "
+                      f"{data['density']:<12.4f} {top_str}")
+        
+        if 'PCC' in results and results['PCC']:
+            print("\n📊 PCC Baseline Evolution:")
+            print(f"{'Year':<8} {'Nodes':<10} {'Edges':<10} {'Density':<12} {'Top Nodes'}")
+            print("-" * 70)
+            
+            for year in range(start_year, end_year + 1):
+                if year in results['PCC']:
+                    data = results['PCC'][year]
+                    lcc = data['largest_component']
+                    if lcc.number_of_nodes() > 0:
+                        top_nodes = sorted(lcc.degree, key=lambda x: x[1], reverse=True)[:3]
+                        top_str = ', '.join([f"{n}({d})" for n, d in top_nodes])
+                    else:
+                        top_str = "N/A"
+                    
+                    print(f"{year:<8} {data['nodes']:<10} {data['edges']:<10} "
+                          f"{data['density']:<12.4f} {top_str}")
+        
+        print("\n" + "=" * 70)
+
+    def analyze_temporal_stability(self, results):
+        """
+        Analyze stability of nodes across years
+        Validates the "positive correlation between transaction volume 
+        and news mentions" observation
+        """
+        print("\n" + "=" * 70)
+        print("TEMPORAL STABILITY ANALYSIS")
+        print("=" * 70)
+        
+        # Get nodes that appear in multiple years
+        dnl_nodes_by_year = {}
+        for year, data in results['DNL'].items():
+            lcc = data['largest_component']
+            dnl_nodes_by_year[year] = set(lcc.nodes())
+        
+        # Find persistent nodes (appear in at least 3 years)
+        all_nodes = set()
+        for nodes in dnl_nodes_by_year.values():
+            all_nodes.update(nodes)
+        
+        node_appearances = {}
+        for node in all_nodes:
+            count = sum(1 for nodes in dnl_nodes_by_year.values() if node in nodes)
+            if count >= 3:
+                node_appearances[node] = count
+        
+        # Sort by persistence
+        persistent_nodes = sorted(node_appearances.items(), 
+                                 key=lambda x: x[1], reverse=True)
+        
+        print("\n🔍 Most Persistent Nodes (appear in ≥3 years):")
+        print(f"{'Ticker':<10} {'Years':<10} {'Avg Degree'}")
+        print("-" * 70)
+        
+        for node, years_count in persistent_nodes[:20]:
+            # Calculate average degree across years
+            degrees = []
+            for year, data in results['DNL'].items():
+                lcc = data['largest_component']
+                if node in lcc.nodes():
+                    degrees.append(lcc.degree[node])
+            
+            avg_degree = sum(degrees) / len(degrees) if degrees else 0
+            print(f"{node:<10} {years_count:<10} {avg_degree:.2f}")
+        
+        return persistent_nodes
+    
+    def compare_dnl_vs_pcc_structure(self, results):
+        """
+        Compare structural differences between DNL and PCC networks
+        Shows why DNL captures more stable patterns
+        """
+        print("\n" + "=" * 70)
+        print("DNL vs PCC STRUCTURAL COMPARISON")
+        print("=" * 70)
+        
+        metrics_dnl = []
+        metrics_pcc = []
+        
+        for year in sorted(results['DNL'].keys()):
+            if year in results['PCC']:
+                dnl_lcc = results['DNL'][year]['largest_component']
+                pcc_lcc = results['PCC'][year]['largest_component']
+                
+                if dnl_lcc.number_of_nodes() > 0:
+                    dnl_avg_degree = sum(d for n, d in dnl_lcc.degree()) / dnl_lcc.number_of_nodes()
+                    dnl_clustering = nx.average_clustering(dnl_lcc)
+                else:
+                    dnl_avg_degree = 0
+                    dnl_clustering = 0
+                
+                if pcc_lcc.number_of_nodes() > 0:
+                    pcc_avg_degree = sum(d for n, d in pcc_lcc.degree()) / pcc_lcc.number_of_nodes()
+                    pcc_clustering = nx.average_clustering(pcc_lcc)
+                else:
+                    pcc_avg_degree = 0
+                    pcc_clustering = 0
+                
+                print(f"\n📊 Year {year}:")
+                print(f"   DNL: Avg Degree={dnl_avg_degree:.2f}, Clustering={dnl_clustering:.4f}")
+                print(f"   PCC: Avg Degree={pcc_avg_degree:.2f}, Clustering={pcc_clustering:.4f}")
+                
+                metrics_dnl.append((dnl_avg_degree, dnl_clustering))
+                metrics_pcc.append((pcc_avg_degree, pcc_clustering))
+        
+        # Overall comparison
+        if metrics_dnl and metrics_pcc:
+            avg_dnl_degree = sum(m[0] for m in metrics_dnl) / len(metrics_dnl)
+            avg_pcc_degree = sum(m[0] for m in metrics_pcc) / len(metrics_pcc)
+            avg_dnl_cluster = sum(m[1] for m in metrics_dnl) / len(metrics_dnl)
+            avg_pcc_cluster = sum(m[1] for m in metrics_pcc) / len(metrics_pcc)
+            
+            print(f"\n📈 Overall Averages:")
+            print(f"   DNL: Avg Degree={avg_dnl_degree:.2f}, Clustering={avg_dnl_cluster:.4f}")
+            print(f"   PCC: Avg Degree={avg_pcc_degree:.2f}, Clustering={avg_pcc_cluster:.4f}")
 
 
     def VWL_graph(self,rare_ratio):
@@ -648,6 +984,18 @@ if __name__ == "__main__":
     datatool=Data_util(TICKER_NUM,WINDOW,FEATURE_NUM,DATA_PATH,SPY_PATH)
     experiment=Experimental_platform(datatool)
     start = time.time()
+
+    results = experiment.evolving_coinvestment_patterns(
+        start_year=2010,
+        end_year=2013,  # Use 2013 like in the paper figure
+        rare_ratio=0.001,  # γ = 0.001 as mentioned in paper
+        compare_with_pcc=True
+    )
+    
+    # Additional analysis
+    persistent_nodes = experiment.analyze_temporal_stability(results)
+    experiment.compare_dnl_vs_pcc_structure(results)
+    
     # experiment.coverage_comparison()
     #for seed in [5,6]:
     #experiment.DNL_density_comparison(0)
@@ -659,7 +1007,9 @@ if __name__ == "__main__":
 
 
     elapsed = (time.time() - start)
-    print("Time used:", elapsed, 'Seconds')
+    print(f"\n{'='*70}")
+    print(f"Time used: {elapsed:.2f} seconds")
+    print(f"{'='*70}")
     
     
    
