@@ -5,16 +5,16 @@
   },
   "investment_density": {
     "xlg": {
-      "deepcnl": 0.45,
-      "pcc": 0.32
+      "deepcnl": 0.456,
+      "pcc": 0.312
     },
     "oex": {
-      "deepcnl": 0.38,
-      "pcc": 0.41
+      "deepcnl": 0.389,
+      "pcc": 0.405
     },
     "iwl": {
-      "deepcnl": 0.28,
-      "pcc": 0.35
+      "deepcnl": 0.298,
+      "pcc": 0.387
     }
   }
 }

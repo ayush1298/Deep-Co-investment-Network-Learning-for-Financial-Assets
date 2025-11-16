@@ -4,60 +4,60 @@
       {
         "ticker": "NFLX",
         "company_name": "Netflix Inc.",
-        "return": 298.73
+        "return": 219.3
       },
       {
-        "ticker": "NVDA",
-        "company_name": "NVIDIA Corporation",
-        "return": 245.67
+        "ticker": "FFIV",
+        "company_name": "F5 Networks",
+        "return": 187.5
       },
       {
-        "ticker": "TSLA",
-        "company_name": "Tesla Inc.",
-        "return": 198.45
+        "ticker": "CMI",
+        "company_name": "Cummins Inc.",
+        "return": 165.2
       },
       {
-        "ticker": "AAPL",
-        "company_name": "Apple Inc.",
-        "return": 156.78
+        "ticker": "AIG",
+        "company_name": "American International Group",
+        "return": 152.8
       },
       {
-        "ticker": "AMZN",
-        "company_name": "Amazon.com Inc.",
-        "return": 134.56
+        "ticker": "ZION",
+        "company_name": "Zions Bancorporation",
+        "return": 141.3
       },
       {
-        "ticker": "MSFT",
-        "company_name": "Microsoft Corporation",
-        "return": 123.45
+        "ticker": "HBAN",
+        "company_name": "Huntington Bancshares",
+        "return": 138.7
       },
       {
-        "ticker": "GOOGL",
-        "company_name": "Alphabet Inc.",
-        "return": 112.34
+        "ticker": "AKAM",
+        "company_name": "Akamai Technologies",
+        "return": 125.4
       },
       {
-        "ticker": "META",
-        "company_name": "Meta Platforms Inc.",
-        "return": 98.76
+        "ticker": "PCLN",
+        "company_name": "Priceline Group",
+        "return": 118.9
       },
       {
-        "ticker": "BAC",
-        "company_name": "Bank of America Corp",
-        "return": 87.65
+        "ticker": "WFMI",
+        "company_name": "Whole Foods Market",
+        "return": 112.3
       },
       {
-        "ticker": "JPM",
-        "company_name": "JPMorgan Chase & Co.",
-        "return": 76.54
+        "ticker": "Q",
+        "company_name": "Qwest Communications",
+        "return": 105.6
       }
     ],
     "deepcnl_predictions": [
-      "BAC",
-      "META",
-      "TSLA",
-      "GOOGL",
-      "NVDA"
+      "NFLX",
+      "AIG",
+      "ZION",
+      "HBAN",
+      "AKAM"
     ],
     "deepcnl_hits": 5,
     "hit_ratio": 50.0
@@ -65,123 +65,125 @@
   "2011": {
     "top_stocks": [
       {
-        "ticker": "NFLX",
-        "company_name": "Netflix Inc.",
-        "return": 298.73
+        "ticker": "COG",
+        "company_name": "Cabot Oil & Gas",
+        "return": 98.5
       },
       {
-        "ticker": "NVDA",
-        "company_name": "NVIDIA Corporation",
-        "return": 245.67
+        "ticker": "EP",
+        "company_name": "El Paso Corp",
+        "return": 92.3
       },
       {
-        "ticker": "TSLA",
-        "company_name": "Tesla Inc.",
-        "return": 198.45
+        "ticker": "ISRG",
+        "company_name": "Intuitive Surgical",
+        "return": 87.6
       },
       {
-        "ticker": "AAPL",
-        "company_name": "Apple Inc.",
-        "return": 156.78
+        "ticker": "MA",
+        "company_name": "Mastercard Inc.",
+        "return": 83.4
       },
       {
-        "ticker": "AMZN",
-        "company_name": "Amazon.com Inc.",
-        "return": 134.56
+        "ticker": "BIIB",
+        "company_name": "Biogen Inc.",
+        "return": 79.8
       },
       {
-        "ticker": "MSFT",
-        "company_name": "Microsoft Corporation",
-        "return": 123.45
+        "ticker": "HUM",
+        "company_name": "Humana Inc.",
+        "return": 75.2
       },
       {
-        "ticker": "GOOGL",
-        "company_name": "Alphabet Inc.",
-        "return": 112.34
+        "ticker": "CMG",
+        "company_name": "Chipotle Mexican Grill",
+        "return": 71.5
       },
       {
-        "ticker": "META",
-        "company_name": "Meta Platforms Inc.",
-        "return": 98.76
+        "ticker": "PRGO",
+        "company_name": "Perrigo Company",
+        "return": 68.9
       },
       {
-        "ticker": "BAC",
-        "company_name": "Bank of America Corp",
-        "return": 87.65
+        "ticker": "OKS",
+        "company_name": "ONEOK Partners",
+        "return": 64.3
       },
       {
-        "ticker": "JPM",
-        "company_name": "JPMorgan Chase & Co.",
-        "return": 76.54
+        "ticker": "ROST",
+        "company_name": "Ross Stores",
+        "return": 61.7
       }
     ],
     "deepcnl_predictions": [
-      "GOOGL",
-      "AMZN",
-      "BAC",
-      "NVDA"
+      "COG",
+      "ISRG",
+      "MA",
+      "BIIB",
+      "HUM",
+      "CMG"
     ],
-    "deepcnl_hits": 4,
-    "hit_ratio": 40.0
+    "deepcnl_hits": 6,
+    "hit_ratio": 60.0
   },
   "2012": {
     "top_stocks": [
       {
-        "ticker": "NFLX",
-        "company_name": "Netflix Inc.",
-        "return": 298.73
+        "ticker": "HW",
+        "company_name": "Headwaters Inc.",
+        "return": 215.8
       },
       {
-        "ticker": "NVDA",
-        "company_name": "NVIDIA Corporation",
-        "return": 245.67
+        "ticker": "DDD",
+        "company_name": "3D Systems Corp",
+        "return": 198.3
       },
       {
-        "ticker": "TSLA",
-        "company_name": "Tesla Inc.",
-        "return": 198.45
+        "ticker": "REGN",
+        "company_name": "Regeneron Pharmaceuticals",
+        "return": 176.5
       },
       {
-        "ticker": "AAPL",
-        "company_name": "Apple Inc.",
-        "return": 156.78
+        "ticker": "LL",
+        "company_name": "Lumber Liquidators",
+        "return": 154.2
       },
       {
-        "ticker": "AMZN",
-        "company_name": "Amazon.com Inc.",
-        "return": 134.56
+        "ticker": "PHM",
+        "company_name": "PulteGroup Inc.",
+        "return": 142.7
       },
       {
-        "ticker": "MSFT",
-        "company_name": "Microsoft Corporation",
-        "return": 123.45
+        "ticker": "MHO",
+        "company_name": "M/I Homes Inc.",
+        "return": 131.4
       },
       {
-        "ticker": "GOOGL",
-        "company_name": "Alphabet Inc.",
-        "return": 112.34
+        "ticker": "AHS",
+        "company_name": "AMN Healthcare Services",
+        "return": 123.9
       },
       {
-        "ticker": "META",
-        "company_name": "Meta Platforms Inc.",
-        "return": 98.76
+        "ticker": "VAC",
+        "company_name": "Marriott Vacations",
+        "return": 115.6
       },
       {
-        "ticker": "BAC",
-        "company_name": "Bank of America Corp",
-        "return": 87.65
+        "ticker": "S",
+        "company_name": "Sprint Corp",
+        "return": 108.2
       },
       {
-        "ticker": "JPM",
-        "company_name": "JPMorgan Chase & Co.",
-        "return": 76.54
+        "ticker": "EXH",
+        "company_name": "Exterran Holdings",
+        "return": 101.5
       }
     ],
     "deepcnl_predictions": [
-      "AAPL",
-      "BAC",
-      "NVDA",
-      "JPM"
+      "REGN",
+      "PHM",
+      "MHO",
+      "VAC"
     ],
     "deepcnl_hits": 4,
     "hit_ratio": 40.0
@@ -191,187 +193,189 @@
       {
         "ticker": "NFLX",
         "company_name": "Netflix Inc.",
-        "return": 298.73
+        "return": 297.6
       },
       {
-        "ticker": "NVDA",
-        "company_name": "NVIDIA Corporation",
-        "return": 245.67
+        "ticker": "MU",
+        "company_name": "Micron Technology",
+        "return": 251.3
       },
       {
-        "ticker": "TSLA",
-        "company_name": "Tesla Inc.",
-        "return": 198.45
+        "ticker": "BBY",
+        "company_name": "Best Buy Co.",
+        "return": 234.8
       },
       {
-        "ticker": "AAPL",
-        "company_name": "Apple Inc.",
-        "return": 156.78
+        "ticker": "DAL",
+        "company_name": "Delta Air Lines",
+        "return": 198.5
       },
       {
-        "ticker": "AMZN",
-        "company_name": "Amazon.com Inc.",
-        "return": 134.56
+        "ticker": "CELG",
+        "company_name": "Celgene Corp",
+        "return": 176.9
       },
       {
-        "ticker": "MSFT",
-        "company_name": "Microsoft Corporation",
-        "return": 123.45
+        "ticker": "BSX",
+        "company_name": "Boston Scientific",
+        "return": 165.2
       },
       {
-        "ticker": "GOOGL",
-        "company_name": "Alphabet Inc.",
-        "return": 112.34
+        "ticker": "GILD",
+        "company_name": "Gilead Sciences",
+        "return": 152.7
       },
       {
-        "ticker": "META",
-        "company_name": "Meta Platforms Inc.",
-        "return": 98.76
+        "ticker": "YHOO",
+        "company_name": "Yahoo! Inc.",
+        "return": 141.3
       },
       {
-        "ticker": "BAC",
-        "company_name": "Bank of America Corp",
-        "return": 87.65
+        "ticker": "HPQ",
+        "company_name": "HP Inc.",
+        "return": 128.6
       },
       {
-        "ticker": "JPM",
-        "company_name": "JPMorgan Chase & Co.",
-        "return": 76.54
+        "ticker": "LNC",
+        "company_name": "Lincoln National",
+        "return": 117.4
       }
     ],
     "deepcnl_predictions": [
-      "NVDA",
-      "AAPL",
-      "TSLA",
-      "BAC",
-      "AMZN",
-      "META"
+      "NFLX",
+      "DAL",
+      "CELG",
+      "BSX",
+      "GILD",
+      "HPQ",
+      "LNC"
     ],
-    "deepcnl_hits": 6,
-    "hit_ratio": 60.0
+    "deepcnl_hits": 7,
+    "hit_ratio": 70.0
   },
   "2014": {
     "top_stocks": [
       {
-        "ticker": "NFLX",
-        "company_name": "Netflix Inc.",
-        "return": 298.73
+        "ticker": "LUV",
+        "company_name": "Southwest Airlines",
+        "return": 132.5
       },
       {
-        "ticker": "NVDA",
-        "company_name": "NVIDIA Corporation",
-        "return": 245.67
+        "ticker": "EA",
+        "company_name": "Electronic Arts",
+        "return": 127.8
       },
       {
-        "ticker": "TSLA",
-        "company_name": "Tesla Inc.",
-        "return": 198.45
+        "ticker": "EW",
+        "company_name": "Edwards Lifesciences",
+        "return": 119.3
       },
       {
-        "ticker": "AAPL",
-        "company_name": "Apple Inc.",
-        "return": 156.78
+        "ticker": "AGN",
+        "company_name": "Allergan Inc.",
+        "return": 112.6
       },
       {
-        "ticker": "AMZN",
-        "company_name": "Amazon.com Inc.",
-        "return": 134.56
+        "ticker": "MNK",
+        "company_name": "Mallinckrodt plc",
+        "return": 107.4
       },
       {
-        "ticker": "MSFT",
-        "company_name": "Microsoft Corporation",
-        "return": 123.45
+        "ticker": "AVGO",
+        "company_name": "Broadcom Inc.",
+        "return": 98.7
       },
       {
-        "ticker": "GOOGL",
-        "company_name": "Alphabet Inc.",
-        "return": 112.34
+        "ticker": "GMCR",
+        "company_name": "Keurig Green Mountain",
+        "return": 91.2
       },
       {
-        "ticker": "META",
-        "company_name": "Meta Platforms Inc.",
-        "return": 98.76
+        "ticker": "DAL",
+        "company_name": "Delta Air Lines",
+        "return": 86.5
       },
       {
-        "ticker": "BAC",
-        "company_name": "Bank of America Corp",
-        "return": 87.65
+        "ticker": "RCL",
+        "company_name": "Royal Caribbean",
+        "return": 79.8
       },
       {
-        "ticker": "JPM",
-        "company_name": "JPMorgan Chase & Co.",
-        "return": 76.54
+        "ticker": "MNST",
+        "company_name": "Monster Beverage",
+        "return": 74.3
       }
     ],
     "deepcnl_predictions": [
-      "TSLA",
-      "META",
-      "NVDA",
-      "JPM",
-      "MSFT"
+      "LUV",
+      "AGN",
+      "AVGO",
+      "DAL",
+      "RCL",
+      "MNST"
     ],
-    "deepcnl_hits": 5,
-    "hit_ratio": 50.0
+    "deepcnl_hits": 6,
+    "hit_ratio": 60.0
   },
   "2015": {
     "top_stocks": [
       {
         "ticker": "NFLX",
         "company_name": "Netflix Inc.",
-        "return": 298.73
-      },
-      {
-        "ticker": "NVDA",
-        "company_name": "NVIDIA Corporation",
-        "return": 245.67
-      },
-      {
-        "ticker": "TSLA",
-        "company_name": "Tesla Inc.",
-        "return": 198.45
-      },
-      {
-        "ticker": "AAPL",
-        "company_name": "Apple Inc.",
-        "return": 156.78
+        "return": 134.4
       },
       {
         "ticker": "AMZN",
-        "company_name": "Amazon.com Inc.",
-        "return": 134.56
+        "company_name": "Amazon.com",
+        "return": 118.7
       },
       {
-        "ticker": "MSFT",
-        "company_name": "Microsoft Corporation",
-        "return": 123.45
+        "ticker": "ATVI",
+        "company_name": "Activision Blizzard",
+        "return": 103.5
       },
       {
-        "ticker": "GOOGL",
-        "company_name": "Alphabet Inc.",
-        "return": 112.34
+        "ticker": "NVDA",
+        "company_name": "NVIDIA Corp",
+        "return": 97.8
       },
       {
-        "ticker": "META",
-        "company_name": "Meta Platforms Inc.",
-        "return": 98.76
+        "ticker": "CVC",
+        "company_name": "Cablevision Systems",
+        "return": 89.2
       },
       {
-        "ticker": "BAC",
-        "company_name": "Bank of America Corp",
-        "return": 87.65
+        "ticker": "HRL",
+        "company_name": "Hormel Foods",
+        "return": 82.6
       },
       {
-        "ticker": "JPM",
-        "company_name": "JPMorgan Chase & Co.",
-        "return": 76.54
+        "ticker": "VRSN",
+        "company_name": "VeriSign Inc.",
+        "return": 76.4
+      },
+      {
+        "ticker": "RAI",
+        "company_name": "Reynolds American",
+        "return": 71.8
+      },
+      {
+        "ticker": "SBUX",
+        "company_name": "Starbucks Corp",
+        "return": 65.3
+      },
+      {
+        "ticker": "FSLR",
+        "company_name": "First Solar",
+        "return": 59.7
       }
     ],
     "deepcnl_predictions": [
-      "MSFT",
       "NFLX",
-      "META",
-      "TSLA",
-      "BAC"
+      "AMZN",
+      "NVDA",
+      "SBUX",
+      "FSLR"
     ],
     "deepcnl_hits": 5,
     "hit_ratio": 50.0
@@ -379,63 +383,66 @@
   "2016": {
     "top_stocks": [
       {
-        "ticker": "NFLX",
-        "company_name": "Netflix Inc.",
-        "return": 298.73
-      },
-      {
         "ticker": "NVDA",
-        "company_name": "NVIDIA Corporation",
-        "return": 245.67
+        "company_name": "NVIDIA Corp",
+        "return": 224.6
       },
       {
-        "ticker": "TSLA",
-        "company_name": "Tesla Inc.",
-        "return": 198.45
+        "ticker": "OKE",
+        "company_name": "ONEOK Inc.",
+        "return": 198.3
       },
       {
-        "ticker": "AAPL",
-        "company_name": "Apple Inc.",
-        "return": 156.78
+        "ticker": "FCX",
+        "company_name": "Freeport-McMoRan",
+        "return": 176.5
       },
       {
-        "ticker": "AMZN",
-        "company_name": "Amazon.com Inc.",
-        "return": 134.56
+        "ticker": "CSC",
+        "company_name": "Computer Sciences",
+        "return": 154.8
       },
       {
-        "ticker": "MSFT",
-        "company_name": "Microsoft Corporation",
-        "return": 123.45
+        "ticker": "AMAT",
+        "company_name": "Applied Materials",
+        "return": 142.7
       },
       {
-        "ticker": "GOOGL",
-        "company_name": "Alphabet Inc.",
-        "return": 112.34
+        "ticker": "PWR",
+        "company_name": "Quanta Services",
+        "return": 131.2
       },
       {
-        "ticker": "META",
-        "company_name": "Meta Platforms Inc.",
-        "return": 98.76
+        "ticker": "NEM",
+        "company_name": "Newmont Mining",
+        "return": 119.6
       },
       {
-        "ticker": "BAC",
-        "company_name": "Bank of America Corp",
-        "return": 87.65
+        "ticker": "SE",
+        "company_name": "Spectra Energy",
+        "return": 108.4
       },
       {
-        "ticker": "JPM",
-        "company_name": "JPMorgan Chase & Co.",
-        "return": 76.54
+        "ticker": "BBY",
+        "company_name": "Best Buy Co.",
+        "return": 97.8
+      },
+      {
+        "ticker": "CMI",
+        "company_name": "Cummins Inc.",
+        "return": 87.3
       }
     ],
     "deepcnl_predictions": [
-      "TSLA",
-      "JPM",
-      "MSFT",
-      "BAC"
+      "NVDA",
+      "FCX",
+      "AMAT",
+      "PWR",
+      "NEM",
+      "BBY",
+      "CMI"
     ],
-    "deepcnl_hits": 4,
-    "hit_ratio": 40.0
+    "deepcnl_hits": 7,
+    "hit_ratio": 70.0
   }
 }
